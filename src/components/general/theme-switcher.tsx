@@ -15,6 +15,7 @@ const ThemeSwitcher = () => {
   };
 
   useEffect(() => {
+    setTheme('dark');
     setMounted(true);
   }, []);
 
