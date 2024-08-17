@@ -37,7 +37,7 @@ import {
 
 export const EXTERNAL_LINKS = {
   GITHUB: 'https://github.com/muhamamdtayyab3411',
-  GITHUB_REPO: 'https://github.com/muhammadtayyab/iamtayyab.com',
+  GITHUB_REPO: 'https://github.com/muhammadtayyab3411/iamtayyab.com',
   TWITTER: 'https://twitter.com/Tayyab_3411',
 };
 
