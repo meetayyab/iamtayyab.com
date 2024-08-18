@@ -8,14 +8,13 @@ import IconButton from '@/components/general/icon-button';
 
 const ThemeSwitcher = () => {
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { theme = 'dark', setTheme } = useTheme();
 
   const toggleTheme = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark');
   };
 
   useEffect(() => {
-    setTheme('dark');
     setMounted(true);
   }, []);
 
