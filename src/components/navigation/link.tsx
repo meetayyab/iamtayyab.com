@@ -24,14 +24,14 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
     ref
   ) => {
     return (
-      <NextLink
-        {...props}
+      <NextLink {...props} passHref legacyBehavior>
+      <a
         target={externalLink ? '_blank' : '_self'}
         ref={ref}
-        passHref
         className={mergeClasses(
-          noCustomization ??
-            'text-base font-medium text-gray-600 transition-all hover:text-gray-900 active:text-gray-600',
+          noCustomization
+            ? ''
+            : 'text-base font-medium text-gray-600 transition-all hover:text-gray-900 active:text-gray-600',
           withUnderline
             ? 'underline underline-offset-4 transition-all hover:text-gray-900 active:text-gray-600'
             : '',
@@ -39,7 +39,8 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
         )}
       >
         {children}
-      </NextLink>
+      </a>
+    </NextLink>
     );
   }
 );
