@@ -6,9 +6,7 @@ export const mergeClasses = (...inputs: ClassValue[]) => {
 };
 
 export const copyTextToClipboard = async (text: string) => {
-  if ('clipboard' in navigator) {
+  if ('clipboard' in navigator) 
     return await navigator.clipboard.writeText(text);
-  } else {
-    return document.execCommand('copy', true, text);
-  }
+   else return document.execCommand('copy', true, text);
 };
