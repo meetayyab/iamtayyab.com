@@ -71,7 +71,7 @@ export const SOCIAL_LINKS = [
   },
   {
     icon: Linkedin,
-    url: 'https://www.linkedin.com/in/muhammad-tayyab-a12258228/',
+    url: 'https://www.linkedin.com/in/immtayyab',
   },
 ];
 
