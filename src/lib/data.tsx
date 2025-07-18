@@ -25,8 +25,13 @@ import LogoInqiludioDigitalDark from '/public/images/logos/logo-inqiludio-digita
 
 import ProjectTalkMotion from '/public/images/project-talkmotion.jpg';
 import ProjectWAF from '/public/images/project-waf.jpg';
+import ProjectBlackSeal from '/public/images/project-blackseal.png';
+import ProjectVisaBookings from '/public/images/project-visabookings.png';
+import ProjectWorkConnect from '/public/images/project-workconnect.png';
 
 import AvatarOsama from '/public/images/avatar-osama-yawar.png';
+import AvatarVincent from '/public/images/avatar-vincent-ochs.jpeg';
+import AvatarGabriel from '/public/images/avatar-gabriel-tannous.jpeg';
 
 import {
   ExperienceDetails,
@@ -164,26 +169,30 @@ export const EXPERIENCES: ExperienceDetails[] = [
     logo: LogoEfani,
     darkModeLogo: LogoEfaniDark, 
     logoAlt: 'Efani logo',
-    position: 'Full Stack Developer',
+    position: 'Full Stack Engineer',
     startDate: new Date(2023, 3),
     currentlyWorkHere: true,
     summary: [
-      'Developed applications with the MEAN stack, leveraging Node.js, Angular, TypeScript, PostgreSQL, Stripe for payments, and Git for version control.',
-      'Specialized in building scalable backend APIs, ensuring fast and efficient web applications.',
-      'Managed databases with precision, designing effective schemas in PostgreSQL and working with both NoSQL and SQL databases, consistently delivering high-quality results.'
+      'Built a custom subscription system to replace Stripe Subscriptions, supporting flexible billing intervals, trials, and auto-retry. This saved the company over $70,000 annually in fees.',
+      'Created an internal support dashboard combining billing, account, and line management tools. This helped reduce support tickets by 90% and sped up issue resolution.',
+      'Developed an affiliate dashboard that tracks orders and commissions in real time, leading to a 30% increase in affiliate sales.',
+      'Automated sales call analysis by using OpenPhone transcripts with a HuggingFace AI model. Reduced monthly AI costs from $28,800 to about $200 and improved sales process compliance.',
+      'Led a small cross-functional team of developers, designers, and testers. Took ownership of task planning, code reviews, and mentoring junior engineers.'
     ],
   },
   {
     logo: LogoInqiludioDigital,
     darkModeLogo: LogoInqiludioDigitalDark,
     logoAlt: 'Inqiludio Digital logo',
-    position: 'MERN Developer',
+    position: 'Software Engineer',
     startDate: new Date(2022, 8),
     endDate: new Date(2023, 3),
     summary: [
-      'Developed several applications using React.js, focusing on user interfaces, data visualizations, and dynamic web components.',
-      'Built scalable APIs with Express.js and Node.js to create fast and efficient web applications.',
-      'Designed schemas for both NoSQL and SQL databases, like MongoDB and MySQL, consistently delivering high-quality results that met or exceeded expectations and deadlines.',
+      'Facilitated communication for 10,000 individuals by developing an AI-based app translating sign language and voice.',
+      'Developed a React-based dashboard to manage, list, and train language conversion models for enhanced accuracy and usability.',
+      'Leveraged Media pipe Holistic libraries to accurately capture user gestures for real-time sign language recognition.',
+      'Reduced server costs by 25% by optimizing resource allocation and leveraging cloud solutions.',
+      'Improved deployment speed by 50% by introducing automated CI/CD pipelines and optimizing workflows.'
     ],
   },
 ];
@@ -206,6 +215,33 @@ export const PROJECTS: ProjectDetails[] = [
     ],
   },
   {
+    name: 'Black Seal Protection',
+    description: 'Mobile security platform providing comprehensive SIM protection tools, device security analysis, and breach monitoring to reduce account compromise risks for users.',
+    url: 'https://apps.apple.com/us/app/black-seal-protection/id6742754502',
+    previewImage: ProjectBlackSeal,
+    technologies: [
+      'SwiftUI',
+      'Xcode',
+      'Node.js',
+      'PostgreSQL',
+      'Heroku',
+      'Atom SDK',
+    ],
+  },
+  {
+    name: 'VisaBookings',
+    description:
+      'Platform for booking Schengen visa flight reservations, travel insurance, and hotel bookings with integrated payment processing and real-time pricing for travelers.',
+    url: 'https://visabookings.com/',
+    previewImage: ProjectVisaBookings,
+    technologies: [
+      'Node.js',
+      'PostgreSQL',
+      'Stripe',
+      'AWS',
+    ],
+  },
+  {
     name: 'WAF Automation',
     description:
       'A service platform to build custom AI solutions in computer vision and VR with the platform best-in-class integrations.',
@@ -222,14 +258,43 @@ export const PROJECTS: ProjectDetails[] = [
       'PostgreSQL',
     ],
   },
+  {
+    name: 'WorkConnect',
+    description:
+      'A comprehensive cross-platform job marketplace connecting clients with skilled workers, featuring real-time messaging, AI document verification, and secure payment processing across web and mobile interfaces.',
+    url: 'https://workconnect-web-sf58.vercel.app/',
+    previewImage: ProjectWorkConnect,
+    technologies: [
+      'Next.js',
+      'React Native',
+      'Django REST Framework',
+      'PostgreSQL',
+      'WebSocket',
+      'Stripe',
+    ],
+  },
 ];
 
 export const TESTIMONIALS: TestimonialDetails[] = [
   {
     personName: 'Osama Yawar',
     personAvatar: AvatarOsama,
-    title: 'Head of Engineering at Efani',
+    title: 'Head of Engineering - Efani',
     testimonial:
       'An ambitious team player to work with. He has been a great help in solving complex problems. His dedication, expertise and habit of taking ownership added value to our company. Highly recommended !!',
+  },
+  {
+    personName: 'Vincent Ochs',
+    personAvatar: AvatarVincent,
+    title: 'Founder - Kairos',
+    testimonial:
+      `This guy knows exactly what he is been doing and also contributes to the task by providing his own solutions and thoughts. He works independently and made sure I can follow on the way along. I can suggest anyone to work with him`,
+  },
+  {
+    personName: 'Gabriel Tannous',
+    personAvatar: AvatarGabriel,
+    title: 'Lead Software Engineer - Lumachain',
+    testimonial:
+      'Excellent collaboration throughout the entire project. Tayyab consistently delivered high-quality work on time and maintained clear communication. His professionalism and reliability make him someone I would definitely work with again on future projects.',
   },
 ];

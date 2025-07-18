@@ -12,7 +12,13 @@ const TestimonialDetails = ({
 }: TestimonialDetailsProps) => {
   return (
     <Card className="mx-auto flex flex-col items-center gap-6 p-8 md:w-2/3 md:p-12 lg:w-1/3">
-      <Image src={personAvatar!} alt={`${personName} avatar`} width={75}></Image>
+      <Image
+        src={personAvatar!}
+        alt={`${personName} avatar`}
+        width={75}
+        height={75}
+        className="rounded-full"
+      />
       <Typography>&quot;{testimonial}&quot;</Typography>
       <div className="flex w-full flex-col gap-1">
         <Typography

@@ -33,10 +33,10 @@ const HeroSection = () => {
               <span className="inline-block animate-waving-hand">👋</span>
             </Typography>
             <Typography>
-              I&apos;m a Full Stack Developer with expertise in Angular, React.js,
+              I&apos;m a Full Stack and Mobile Developer with expertise in Angular, React.js, React Native, SwiftUI,
               and Node.js, committed to building dynamic and scalable web
-              applications. With over two years of experience, I excel at
-              developing efficient backend solutions and creating user-friendly,
+              applications. With over three years of experience, I excel at
+              developing efficient backend solutions and creating user-friendly, 
               responsive interfaces. My work spans across designing intuitive
               web applications and managing complex databases with MySQL,
               PostgreSQL, and MongoDB. I&apos;m driven by a passion for
