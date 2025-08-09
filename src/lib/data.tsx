@@ -41,8 +41,8 @@ import {
 } from '@/lib/types';
 
 export const EXTERNAL_LINKS = {
-  GITHUB: 'https://github.com/muhamamdtayyab3411',
-  GITHUB_REPO: 'https://github.com/muhammadtayyab3411/iamtayyab.com',
+  GITHUB: 'https://github.com/meetayyab',
+  GITHUB_REPO: 'https://github.com/meetayyab/iamtayyab.com',
   TWITTER: 'https://twitter.com/Tayyab_3411',
 };
 
