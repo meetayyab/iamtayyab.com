@@ -43,7 +43,7 @@ import {
 export const EXTERNAL_LINKS = {
   GITHUB: 'https://github.com/meetayyab',
   GITHUB_REPO: 'https://github.com/meetayyab/iamtayyab.com',
-  TWITTER: 'https://twitter.com/Tayyab_3411',
+  TWITTER: 'https://x.com/iamtayyabx',
 };
 
 export const NAV_LINKS = [
@@ -68,11 +68,11 @@ export const NAV_LINKS = [
 export const SOCIAL_LINKS = [
   {
     icon: Github,
-    url: 'https://github.com/muhammadtayyab3411',
+    url: 'https://github.com/meetayyab',
   },
   {
     icon: Twitter,
-    url: 'https://twitter.com/Tayyab_3411',
+    url: 'https://x.com/iamtayyabx',
   },
   {
     icon: Linkedin,
