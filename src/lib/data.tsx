@@ -60,6 +60,10 @@ export const NAV_LINKS = [
     href: '#testimonials',
   },
   {
+    label: 'Blog',
+    href: '/blog',
+  },
+  {
     label: 'Contact',
     href: '#contact',
   },
