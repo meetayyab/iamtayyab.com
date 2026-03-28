@@ -24,10 +24,10 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
     ref
   ) => {
     return (
-      <NextLink {...props} passHref legacyBehavior>
-      <a
-        target={externalLink ? '_blank' : '_self'}
+      <NextLink
+        {...props}
         ref={ref}
+        target={externalLink ? '_blank' : '_self'}
         className={mergeClasses(
           noCustomization
             ? ''
@@ -39,8 +39,7 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
         )}
       >
         {children}
-      </a>
-    </NextLink>
+      </NextLink>
     );
   }
 );

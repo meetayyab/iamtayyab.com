@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { ExternalLink } from 'lucide-react';
 
-import { ProjectDetails as ProjectDetailsType } from '@/lib/types';
+import type { ProjectDetails as ProjectDetailsType } from '@/lib/types';
 import { mergeClasses } from '@/lib/utils';
 import Typography from '@/components/general/typography';
 import Link from '@/components/navigation/link';

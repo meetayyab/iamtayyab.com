@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import { TestimonialDetails as TestimonialDetailsProps } from '@/lib/types';
+import type { TestimonialDetails as TestimonialDetailsProps } from '@/lib/types';
 import Typography from '@/components/general/typography';
 import Card from '@/components/layout/card';
 

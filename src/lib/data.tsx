@@ -1,37 +1,37 @@
 import { Github, Twitter, Linkedin } from 'lucide-react';
 
-import LogoJavascript from '/public/images/logos/icon-javascript.svg';
-import LogoTypescript from '/public/images/logos/icon-typescript.svg';
-import LogoReact from '/public/images/logos/icon-react.svg';
-import LogoAngular from '/public/images/logos/icon-angular.svg';
-import LogoMySQL from '/public/images/logos/icon-mysql.svg';
-import LogoDocker from '/public/images/logos/icon-docker.svg';
-import LogoStripe from '/public/images/logos/icon-stripe.svg';
-import LogoAWS from '/public/images/logos/icon-aws.svg';
-import LogoBootstrap from '/public/images/logos/icon-bootstrap.svg';
-import LogoNodejs from '/public/images/logos/icon-nodejs.svg';
-import LogoExpress from '/public/images/logos/icon-express.svg';
-import LogoExpressLight from '/public/images/logos/icon-express-light.svg';
-import LogoPostgreSQL from '/public/images/logos/icon-postgresql.svg';
-import LogoMongoDB from '/public/images/logos/icon-mongodb.svg';
-import LogoSass from '/public/images/logos/icon-sass.svg';
-import LogoTailwindcss from '/public/images/logos/icon-tailwindcss.svg';
-import LogoGit from '/public/images/logos/icon-git.svg';
+import LogoJavascript from '../../public/images/logos/icon-javascript.svg';
+import LogoTypescript from '../../public/images/logos/icon-typescript.svg';
+import LogoReact from '../../public/images/logos/icon-react.svg';
+import LogoAngular from '../../public/images/logos/icon-angular.svg';
+import LogoMySQL from '../../public/images/logos/icon-mysql.svg';
+import LogoDocker from '../../public/images/logos/icon-docker.svg';
+import LogoStripe from '../../public/images/logos/icon-stripe.svg';
+import LogoAWS from '../../public/images/logos/icon-aws.svg';
+import LogoBootstrap from '../../public/images/logos/icon-bootstrap.svg';
+import LogoNodejs from '../../public/images/logos/icon-nodejs.svg';
+import LogoExpress from '../../public/images/logos/icon-express.svg';
+import LogoExpressLight from '../../public/images/logos/icon-express-light.svg';
+import LogoPostgreSQL from '../../public/images/logos/icon-postgresql.svg';
+import LogoMongoDB from '../../public/images/logos/icon-mongodb.svg';
+import LogoSass from '../../public/images/logos/icon-sass.svg';
+import LogoTailwindcss from '../../public/images/logos/icon-tailwindcss.svg';
+import LogoGit from '../../public/images/logos/icon-git.svg';
 
-import LogoEfani from '/public/images/logos/logo-efani.svg';
-import LogoEfaniDark from '/public/images/logos/logo-efani-dark.svg';
-import LogoInqiludioDigital from '/public/images/logos/logo-inqiludio-digital.svg';
-import LogoInqiludioDigitalDark from '/public/images/logos/logo-inqiludio-digital-dark.svg';
+import LogoEfani from '../../public/images/logos/logo-efani.svg';
+import LogoEfaniDark from '../../public/images/logos/logo-efani-dark.svg';
+import LogoInqiludioDigital from '../../public/images/logos/logo-inqiludio-digital.svg';
+import LogoInqiludioDigitalDark from '../../public/images/logos/logo-inqiludio-digital-dark.svg';
 
-import ProjectTalkMotion from '/public/images/project-talkmotion.jpg';
-import ProjectWAF from '/public/images/project-waf.jpg';
-import ProjectBlackSeal from '/public/images/project-blackseal.png';
-import ProjectVisaBookings from '/public/images/project-visabookings.png';
-import ProjectWorkConnect from '/public/images/project-workconnect.png';
+import ProjectTalkMotion from '../../public/images/project-talkmotion.jpg';
+import ProjectWAF from '../../public/images/project-waf.jpg';
+import ProjectBlackSeal from '../../public/images/project-blackseal.png';
+import ProjectVisaBookings from '../../public/images/project-visabookings.png';
+import ProjectWorkConnect from '../../public/images/project-workconnect.png';
 
-import AvatarOsama from '/public/images/avatar-osama-yawar.png';
-import AvatarVincent from '/public/images/avatar-vincent-ochs.jpeg';
-import AvatarGabriel from '/public/images/avatar-gabriel-tannous.jpeg';
+import AvatarOsama from '../../public/images/avatar-osama-yawar.png';
+import AvatarVincent from '../../public/images/avatar-vincent-ochs.jpeg';
+import AvatarGabriel from '../../public/images/avatar-gabriel-tannous.jpeg';
 
 import {
   ExperienceDetails,

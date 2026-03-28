@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { MapPin } from 'lucide-react';
 
-import TayyabHeadshot from '/public/images/tayyab-headshot.jpg';
+import TayyabHeadshot from '../../../public/images/tayyab-headshot.jpg';
 import SocialIcons from '@/components/data-display/social-icons';
 import Typography from '@/components/general/typography';
 import Container from '@/components/layout/container';
