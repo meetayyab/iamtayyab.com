@@ -1,6 +1,6 @@
 import Script from 'next/script';
 import { Inter } from 'next/font/google';
-import { Metadata } from 'next';
+import { Metadata, Viewport } from 'next';
 
 import './globals.css';
 import Header from '@/components/layout/header';
@@ -13,6 +13,13 @@ const title = 'Muhammad Tayyab | Full Stack Developer From Peshawar, Pakistan.';
 const description =
   'A dedicated Full Stack Developer who specializes in building web applications using React.js, Angular & Node.js, from Peshawar, Pakistan.';
 const url = 'https://iamtayyab.com';
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: 'white' },
+    { media: '(prefers-color-scheme: dark)', color: 'black' },
+  ],
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(url),
@@ -29,10 +36,6 @@ export const metadata: Metadata = {
     'Node'
   ],
   creator: 'Muhammad Tayyab',
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' },
-  ],
   openGraph: {
     type: 'website',
     url,

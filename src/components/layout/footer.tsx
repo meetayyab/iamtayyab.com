@@ -1,3 +1,5 @@
+'use client';
+
 import { Copyright } from 'lucide-react';
 
 import Typography from '@/components/general/typography';

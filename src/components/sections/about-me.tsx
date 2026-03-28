@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import TayyabFullPose from '/public/images/tayyab-full-pose.jpg';
+import TayyabFullPose from '../../../public/images/tayyab-full-pose.jpg';
 import Tag from '@/components/data-display/tag';
 import Container from '@/components/layout/container';
 import Typography from '@/components/general/typography';
