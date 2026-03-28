@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import React from 'react';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { PortableText, PortableTextComponents } from '@portabletext/react';
@@ -47,6 +48,19 @@ export async function generateMetadata({
   };
 }
 
+function CodeBlock({ text }: { text: string }) {
+  return (
+    <div className="my-4 w-full overflow-hidden rounded-xl bg-gray-950">
+      <div className="border-b border-gray-800 px-4 py-2">
+        <span className="text-xs text-gray-500">code</span>
+      </div>
+      <pre className="overflow-x-auto p-5">
+        <code className="font-mono text-sm text-emerald-400">{text}</code>
+      </pre>
+    </div>
+  );
+}
+
 const portableTextComponents: PortableTextComponents = {
   types: {
     image: ({ value }: any) => {
@@ -86,9 +100,35 @@ const portableTextComponents: PortableTextComponents = {
     h4: ({ children }: any) => (
       <h4 className="mb-2 mt-5 text-xl font-semibold text-gray-900">{children}</h4>
     ),
-    normal: ({ children }: any) => (
-      <p className="mb-4 leading-relaxed text-gray-600">{children}</p>
-    ),
+    normal: ({ children }: any) => {
+      // Check if all children are code-marked spans (single code-only block)
+      const childArray = React.Children.toArray(children);
+      const isAllCode =
+        childArray.length > 0 &&
+        childArray.every((child) => {
+          if (typeof child === 'string') return false;
+          if (React.isValidElement(child)) {
+            return (child.props as any)?.className?.includes('emerald') ||
+              (child.type === 'code') ||
+              ((child.props as any)?.['data-code'] === true);
+          }
+          return false;
+        });
+
+      if (isAllCode) {
+        const textContent = childArray
+          .map((c) => {
+            if (React.isValidElement(c)) {
+              return (c.props as any)?.children ?? '';
+            }
+            return String(c);
+          })
+          .join('');
+        return <CodeBlock text={textContent} />;
+      }
+
+      return <p className="mb-4 leading-relaxed text-gray-600">{children}</p>;
+    },
     blockquote: ({ children }: any) => (
       <blockquote className="my-6 border-l-4 border-gray-300 pl-5 italic text-gray-500">
         {children}
@@ -112,11 +152,20 @@ const portableTextComponents: PortableTextComponents = {
       <strong className="font-semibold text-gray-900">{children}</strong>
     ),
     em: ({ children }: any) => <em>{children}</em>,
-    code: ({ children }: any) => (
-      <code className="rounded bg-gray-100 px-1.5 py-0.5 font-mono text-sm text-gray-800 dark:bg-gray-200 dark:text-gray-100">
-        {children}
-      </code>
-    ),
+    code: ({ children }: any) => {
+      const text = typeof children === 'string' ? children : String(children ?? '');
+      if (text.includes('\n')) {
+        return <CodeBlock text={text} />;
+      }
+      return (
+        <code
+          data-code={true}
+          className="rounded bg-slate-900 px-2 py-0.5 font-mono text-sm text-emerald-400"
+        >
+          {children}
+        </code>
+      );
+    },
     link: ({ value, children }: any) => (
       <a
         href={value?.href}
