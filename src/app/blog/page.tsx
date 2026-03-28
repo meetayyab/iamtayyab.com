@@ -66,7 +66,7 @@ export default async function BlogPage() {
             <Link
               key={post._id}
               href={`/blog/${post.slug.current}`}
-              className="group flex flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+              className="group flex flex-col overflow-hidden rounded-2xl border border-gray-100 bg-gray shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-gray-300 dark:bg-gray-100"
             >
               {/* Image / Gradient */}
               <div className="relative h-48 w-full overflow-hidden">
@@ -109,24 +109,24 @@ export default async function BlogPage() {
                 )}
 
                 {/* Title */}
-                <h3 className="mb-2 text-base font-bold leading-snug text-gray-900 line-clamp-2 group-hover:text-violet-600 transition-colors">
+                <h3 className="mb-2 text-base font-bold leading-snug text-gray-900 line-clamp-2 group-hover:text-violet-600 transition-colors dark:text-gray-900">
                   {post.title}
                 </h3>
 
                 {/* Excerpt */}
                 {post.excerpt && (
-                  <p className="flex-1 text-sm leading-relaxed text-gray-500 line-clamp-2">
+                  <p className="flex-1 text-sm leading-relaxed text-gray-500 line-clamp-2 dark:text-gray-400">
                     {post.excerpt}
                   </p>
                 )}
 
                 {/* Footer */}
-                <div className="mt-4 flex items-center gap-2.5 border-t border-gray-100 pt-4">
+                <div className="mt-4 flex items-center gap-2.5 border-t border-gray-100 pt-4 dark:border-gray-300">
                   <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-violet-500 to-indigo-600 text-xs font-bold text-white">
                     T
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-xs font-medium text-gray-700">Muhammad Tayyab</span>
+                    <span className="text-xs font-medium text-gray-700 dark:text-gray-400">Muhammad Tayyab</span>
                     <div className="flex items-center gap-1 text-[11px] text-gray-400">
                       <span>{formatDate(post.publishedAt)}</span>
                       {post.estimatedReadingTime > 0 && (
