@@ -50,12 +50,14 @@ export async function generateMetadata({
 
 function CodeBlock({ text }: { text: string }) {
   return (
-    <div className="my-4 w-full overflow-hidden rounded-xl bg-gray-950">
-      <div className="border-b border-gray-800 px-4 py-2">
-        <span className="text-xs text-gray-500">code</span>
+    <div className="my-6 w-full overflow-hidden rounded-xl border border-gray-800 bg-gray-950">
+      <div className="flex items-center gap-1.5 border-b border-gray-800 bg-gray-900 px-4 py-2.5">
+        <span className="h-3 w-3 rounded-full bg-red-500/70" />
+        <span className="h-3 w-3 rounded-full bg-yellow-500/70" />
+        <span className="h-3 w-3 rounded-full bg-green-500/70" />
       </div>
-      <pre className="overflow-x-auto p-5">
-        <code className="font-mono text-sm text-emerald-400">{text}</code>
+      <pre className="overflow-x-auto p-5 text-sm leading-relaxed">
+        <code className="font-mono text-emerald-400 whitespace-pre">{text}</code>
       </pre>
     </div>
   );
@@ -89,45 +91,30 @@ const portableTextComponents: PortableTextComponents = {
   },
   block: {
     h1: ({ children }: any) => (
-      <h1 className="mb-4 mt-8 text-4xl font-bold text-gray-900">{children}</h1>
+      <h1 className="mb-4 mt-8 text-4xl font-bold text-gray-900 dark:text-gray-100">{children}</h1>
     ),
     h2: ({ children }: any) => (
-      <h2 className="mb-3 mt-7 text-3xl font-semibold text-gray-900">{children}</h2>
+      <h2 className="mb-3 mt-7 text-3xl font-semibold text-gray-900 dark:text-gray-100">{children}</h2>
     ),
     h3: ({ children }: any) => (
-      <h3 className="mb-2 mt-6 text-2xl font-semibold text-gray-900">{children}</h3>
+      <h3 className="mb-2 mt-6 text-2xl font-semibold text-gray-900 dark:text-gray-100">{children}</h3>
     ),
     h4: ({ children }: any) => (
-      <h4 className="mb-2 mt-5 text-xl font-semibold text-gray-900">{children}</h4>
+      <h4 className="mb-2 mt-5 text-xl font-semibold text-gray-900 dark:text-gray-100">{children}</h4>
     ),
-    normal: ({ children }: any) => {
-      // Check if all children are code-marked spans (single code-only block)
-      const childArray = React.Children.toArray(children);
-      const isAllCode =
-        childArray.length > 0 &&
-        childArray.every((child) => {
-          if (typeof child === 'string') return false;
-          if (React.isValidElement(child)) {
-            return (child.props as any)?.className?.includes('emerald') ||
-              (child.type === 'code') ||
-              ((child.props as any)?.['data-code'] === true);
-          }
-          return false;
-        });
+    normal: ({ children, value }: any) => {
+      // Detect blocks where every span has the 'code' mark — render as a code block
+      const spans = value?.children ?? [];
+      const isCodeBlock =
+        spans.length > 0 &&
+        spans.every((span: any) => span.marks?.includes('code'));
 
-      if (isAllCode) {
-        const textContent = childArray
-          .map((c) => {
-            if (React.isValidElement(c)) {
-              return (c.props as any)?.children ?? '';
-            }
-            return String(c);
-          })
-          .join('');
-        return <CodeBlock text={textContent} />;
+      if (isCodeBlock) {
+        const text = spans.map((s: any) => s.text ?? '').join('');
+        return <CodeBlock text={text} />;
       }
 
-      return <p className="mb-4 leading-relaxed text-gray-600">{children}</p>;
+      return <p className="mb-5 leading-relaxed text-gray-600 dark:text-gray-400">{children}</p>;
     },
     blockquote: ({ children }: any) => (
       <blockquote className="my-6 border-l-4 border-gray-300 pl-5 italic text-gray-500">

@@ -23,10 +23,10 @@ function formatDate(dateStr: string) {
 }
 
 const TAG_COLORS = [
-  'bg-blue-100 text-blue-700',
-  'bg-purple-100 text-purple-700',
-  'bg-green-100 text-green-700',
-  'bg-orange-100 text-orange-700',
+  'bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300',
+  'bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300',
+  'bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300',
+  'bg-orange-100 text-orange-700 dark:bg-orange-900/40 dark:text-orange-300',
 ];
 
 export default async function BlogPage() {
@@ -57,7 +57,7 @@ export default async function BlogPage() {
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {posts.map((post: any) => (
             <Link key={post._id} href={`/blog/${post.slug.current}`} className="group">
-              <div className="flex h-full flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-shadow hover:shadow-md">
+              <div className="flex h-full flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-shadow hover:shadow-md dark:border-gray-700 dark:bg-gray-800">
                 {/* Cover image or gradient placeholder */}
                 <div className="relative h-52 w-full overflow-hidden">
                   {post.coverImage ? (
@@ -93,27 +93,27 @@ export default async function BlogPage() {
                   )}
 
                   {/* Title */}
-                  <h3 className="text-[18px] font-bold leading-tight text-gray-900 line-clamp-2">
+                  <h3 className="text-[18px] font-bold leading-tight text-gray-900 line-clamp-2 dark:text-gray-100">
                     {post.title}
                   </h3>
 
                   {/* Excerpt */}
                   {post.excerpt && (
-                    <p className="flex-1 text-sm leading-relaxed text-gray-500 line-clamp-2">
+                    <p className="flex-1 text-sm leading-relaxed text-gray-500 line-clamp-2 dark:text-gray-400">
                       {post.excerpt}
                     </p>
                   )}
 
                   {/* Bottom row */}
-                  <div className="mt-auto flex items-center gap-2 border-t border-gray-100 pt-3">
-                    <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-violet-100 text-xs font-semibold text-violet-700">
+                  <div className="mt-auto flex items-center gap-2 border-t border-gray-100 pt-3 dark:border-gray-700">
+                    <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-violet-100 text-xs font-semibold text-violet-700 dark:bg-violet-900/40 dark:text-violet-300">
                       T
                     </div>
-                    <span className="text-xs text-gray-400">{formatDate(post.publishedAt)}</span>
+                    <span className="text-xs text-gray-400 dark:text-gray-500">{formatDate(post.publishedAt)}</span>
                     {post.estimatedReadingTime > 0 && (
                       <>
-                        <span className="text-xs text-gray-300">·</span>
-                        <span className="text-xs text-gray-400">
+                        <span className="text-xs text-gray-300 dark:text-gray-600">·</span>
+                        <span className="text-xs text-gray-400 dark:text-gray-500">
                           {post.estimatedReadingTime} min read
                         </span>
                       </>
