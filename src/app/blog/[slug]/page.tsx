@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { PortableText, PortableTextComponents } from '@portabletext/react';
@@ -48,16 +47,18 @@ export async function generateMetadata({
   };
 }
 
+// Use zinc scale — NOT overridden by the site's custom gray CSS vars
 function CodeBlock({ text }: { text: string }) {
   return (
-    <div className="my-6 w-full overflow-hidden rounded-xl border border-gray-800 bg-gray-950">
-      <div className="flex items-center gap-1.5 border-b border-gray-800 bg-gray-900 px-4 py-2.5">
-        <span className="h-3 w-3 rounded-full bg-red-500/70" />
-        <span className="h-3 w-3 rounded-full bg-yellow-500/70" />
-        <span className="h-3 w-3 rounded-full bg-green-500/70" />
+    <div className="not-prose my-7 w-full overflow-hidden rounded-xl border border-zinc-700 bg-zinc-900 shadow-lg">
+      {/* macOS window chrome */}
+      <div className="flex items-center gap-1.5 border-b border-zinc-700 bg-zinc-800 px-4 py-3">
+        <span className="h-3 w-3 rounded-full bg-red-400/80" />
+        <span className="h-3 w-3 rounded-full bg-yellow-400/80" />
+        <span className="h-3 w-3 rounded-full bg-green-400/80" />
       </div>
-      <pre className="overflow-x-auto p-5 text-sm leading-relaxed">
-        <code className="font-mono text-emerald-400 whitespace-pre">{text}</code>
+      <pre className="overflow-x-auto p-5">
+        <code className="whitespace-pre font-mono text-sm leading-relaxed text-emerald-400">{text}</code>
       </pre>
     </div>
   );
@@ -68,11 +69,8 @@ const portableTextComponents: PortableTextComponents = {
     image: ({ value }: any) => {
       if (!value?.asset) return null;
       return (
-        <figure className="my-8">
-          <div
-            className="relative w-full overflow-hidden rounded-xl"
-            style={{ aspectRatio: '16/9' }}
-          >
+        <figure className="my-10">
+          <div className="relative w-full overflow-hidden rounded-2xl shadow-md" style={{ aspectRatio: '16/9' }}>
             <Image
               src={urlFor(value).width(900).url()}
               alt={value.alt || ''}
@@ -81,7 +79,7 @@ const portableTextComponents: PortableTextComponents = {
             />
           </div>
           {value.caption && (
-            <figcaption className="mt-2 text-center text-sm text-gray-400">
+            <figcaption className="mt-3 text-center text-sm text-gray-400">
               {value.caption}
             </figcaption>
           )}
@@ -91,19 +89,18 @@ const portableTextComponents: PortableTextComponents = {
   },
   block: {
     h1: ({ children }: any) => (
-      <h1 className="mb-4 mt-8 text-4xl font-bold text-gray-900 dark:text-gray-100">{children}</h1>
+      <h1 className="mb-4 mt-10 text-4xl font-bold leading-tight text-gray-900">{children}</h1>
     ),
     h2: ({ children }: any) => (
-      <h2 className="mb-3 mt-7 text-3xl font-semibold text-gray-900 dark:text-gray-100">{children}</h2>
+      <h2 className="mb-3 mt-9 text-2xl font-bold leading-snug text-gray-900">{children}</h2>
     ),
     h3: ({ children }: any) => (
-      <h3 className="mb-2 mt-6 text-2xl font-semibold text-gray-900 dark:text-gray-100">{children}</h3>
+      <h3 className="mb-2 mt-7 text-xl font-semibold text-gray-900">{children}</h3>
     ),
     h4: ({ children }: any) => (
-      <h4 className="mb-2 mt-5 text-xl font-semibold text-gray-900 dark:text-gray-100">{children}</h4>
+      <h4 className="mb-2 mt-6 text-lg font-semibold text-gray-900">{children}</h4>
     ),
     normal: ({ children, value }: any) => {
-      // Detect blocks where every span has the 'code' mark — render as a code block
       const spans = value?.children ?? [];
       const isCodeBlock =
         spans.length > 0 &&
@@ -114,41 +111,41 @@ const portableTextComponents: PortableTextComponents = {
         return <CodeBlock text={text} />;
       }
 
-      return <p className="mb-5 leading-relaxed text-gray-600 dark:text-gray-400">{children}</p>;
+      return (
+        <p className="mb-5 text-[17px] leading-[1.8] text-gray-600">{children}</p>
+      );
     },
     blockquote: ({ children }: any) => (
-      <blockquote className="my-6 border-l-4 border-gray-300 pl-5 italic text-gray-500">
+      <blockquote className="my-8 border-l-4 border-violet-400 bg-violet-50 py-3 pl-6 pr-4 rounded-r-xl italic text-gray-600">
         {children}
       </blockquote>
     ),
   },
   list: {
     bullet: ({ children }: any) => (
-      <ul className="mb-4 ml-6 list-disc space-y-1 text-gray-600">{children}</ul>
+      <ul className="mb-5 ml-5 space-y-2 text-[17px] text-gray-600">{children}</ul>
     ),
     number: ({ children }: any) => (
-      <ol className="mb-4 ml-6 list-decimal space-y-1 text-gray-600">{children}</ol>
+      <ol className="mb-5 ml-5 list-decimal space-y-2 text-[17px] text-gray-600">{children}</ol>
     ),
   },
   listItem: {
-    bullet: ({ children }: any) => <li className="leading-relaxed">{children}</li>,
+    bullet: ({ children }: any) => (
+      <li className="flex items-start gap-2 leading-relaxed before:mt-2 before:h-1.5 before:w-1.5 before:shrink-0 before:rounded-full before:bg-violet-400">
+        <span>{children}</span>
+      </li>
+    ),
     number: ({ children }: any) => <li className="leading-relaxed">{children}</li>,
   },
   marks: {
     strong: ({ children }: any) => (
       <strong className="font-semibold text-gray-900">{children}</strong>
     ),
-    em: ({ children }: any) => <em>{children}</em>,
+    em: ({ children }: any) => <em className="italic">{children}</em>,
     code: ({ children }: any) => {
-      const text = typeof children === 'string' ? children : String(children ?? '');
-      if (text.includes('\n')) {
-        return <CodeBlock text={text} />;
-      }
+      // Inline code — zinc scale to avoid CSS var override
       return (
-        <code
-          data-code={true}
-          className="rounded bg-slate-900 px-2 py-0.5 font-mono text-sm text-emerald-400"
-        >
+        <code className="rounded-md bg-zinc-800 px-1.5 py-0.5 font-mono text-[0.85em] text-emerald-400">
           {children}
         </code>
       );
@@ -158,7 +155,7 @@ const portableTextComponents: PortableTextComponents = {
         href={value?.href}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-gray-900 underline underline-offset-2 transition-colors hover:text-gray-700"
+        className="font-medium text-violet-600 underline underline-offset-2 transition-colors hover:text-violet-800"
       >
         {children}
       </a>
@@ -197,41 +194,59 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       />
       <Container>
         <div className="mx-auto w-full max-w-3xl">
+
+          {/* Back link */}
           <Link
             href="/blog"
-            className="mb-8 inline-flex items-center gap-2 text-sm text-gray-400 transition-colors hover:text-gray-600"
+            className="mb-10 inline-flex items-center gap-1.5 rounded-full border border-gray-200 px-4 py-1.5 text-sm text-gray-500 transition-all hover:border-violet-300 hover:text-violet-600"
           >
-            ← Back to Blog
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" className="shrink-0">
+              <path d="M10 12L6 8L10 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+            Back to Blog
           </Link>
+
+          {/* Tags */}
           {post.tags && post.tags.length > 0 && (
-            <div className="mb-4 flex flex-wrap gap-2">
+            <div className="mb-5 flex flex-wrap gap-2">
               {post.tags.map((tag: string) => (
                 <span
                   key={tag}
-                  className="rounded-full bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-600 dark:bg-gray-200 dark:text-gray-400"
+                  className="rounded-full bg-violet-50 px-3 py-1 text-xs font-semibold text-violet-600 ring-1 ring-violet-200"
                 >
                   {tag}
                 </span>
               ))}
             </div>
           )}
-          <Typography variant="h1" className="mb-4 leading-tight">
+
+          {/* Title */}
+          <Typography variant="h1" className="mb-5 text-4xl font-extrabold leading-tight tracking-tight">
             {post.title}
           </Typography>
-          <div className="mb-8 flex items-center gap-3 text-sm text-gray-400">
-            <span>{formatDate(post.publishedAt)}</span>
-            {post.estimatedReadingTime > 0 && (
-              <>
-                <span>·</span>
-                <span>{post.estimatedReadingTime} min read</span>
-              </>
-            )}
+
+          {/* Author + meta row */}
+          <div className="mb-10 flex items-center gap-3 border-b border-gray-100 pb-8">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-violet-500 to-indigo-600 text-sm font-bold text-white shadow-sm">
+              T
+            </div>
+            <div>
+              <p className="text-sm font-semibold text-gray-800">Muhammad Tayyab</p>
+              <div className="flex items-center gap-2 text-sm text-gray-400">
+                <span>{formatDate(post.publishedAt)}</span>
+                {post.estimatedReadingTime > 0 && (
+                  <>
+                    <span>·</span>
+                    <span>{post.estimatedReadingTime} min read</span>
+                  </>
+                )}
+              </div>
+            </div>
           </div>
+
+          {/* Cover image */}
           {post.coverImage && (
-            <div
-              className="relative mb-10 w-full overflow-hidden rounded-xl"
-              style={{ aspectRatio: '16/9' }}
-            >
+            <div className="relative mb-12 w-full overflow-hidden rounded-2xl shadow-md" style={{ aspectRatio: '16/9' }}>
               <Image
                 src={urlFor(post.coverImage).width(900).height(506).url()}
                 alt={post.coverImage.alt || post.title}
@@ -241,19 +256,35 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               />
             </div>
           )}
+
+          {/* Excerpt callout */}
+          {post.excerpt && (
+            <p className="mb-10 text-lg leading-relaxed text-gray-500 border-l-4 border-violet-300 pl-5 italic">
+              {post.excerpt}
+            </p>
+          )}
+
+          {/* Body */}
           {post.body && (
-            <div>
+            <div className="min-w-0">
               <PortableText value={post.body} components={portableTextComponents} />
             </div>
           )}
-          <div className="mt-12 border-t border-gray-100 pt-8">
+
+          {/* Footer */}
+          <div className="mt-16 flex items-center justify-between border-t border-gray-100 pt-8">
             <Link
               href="/blog"
-              className="inline-flex items-center gap-2 text-sm text-gray-400 transition-colors hover:text-gray-600"
+              className="inline-flex items-center gap-1.5 rounded-full border border-gray-200 px-4 py-1.5 text-sm text-gray-500 transition-all hover:border-violet-300 hover:text-violet-600"
             >
-              ← Back to all posts
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" className="shrink-0">
+                <path d="M10 12L6 8L10 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+              Back to all posts
             </Link>
+            <div className="text-sm text-gray-400">Thanks for reading 🙏</div>
           </div>
+
         </div>
       </Container>
     </>
