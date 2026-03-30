@@ -46,6 +46,9 @@ export const EXTERNAL_LINKS = {
   TWITTER: 'https://x.com/iamtayyabx',
 };
 
+export const GA_MEASUREMENT_ID = 'G-QP4P29943M';
+export const GTM_ID = 'GTM-5PN484ZQ';
+
 export const NAV_LINKS = [
   {
     label: 'About',
