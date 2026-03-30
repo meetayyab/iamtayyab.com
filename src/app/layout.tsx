@@ -14,7 +14,7 @@ const description =
   'A dedicated Full Stack Developer who specializes in building web applications using React.js, Angular & Node.js, from Peshawar, Pakistan.';
 const url = 'https://www.iamtayyab.com';
 
-const GTM_ID = 'GTM-5PN484ZQ';
+const GTM_ID = 'GTM-P5F4JJ5T';
 
 export const viewport: Viewport = {
   themeColor: [

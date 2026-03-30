@@ -47,7 +47,7 @@ export const EXTERNAL_LINKS = {
 };
 
 export const GA_MEASUREMENT_ID = 'G-QP4P29943M';
-export const GTM_ID = 'GTM-5PN484ZQ';
+export const GTM_ID = 'GTM-P5F4JJ5T';
 
 export const NAV_LINKS = [
   {
