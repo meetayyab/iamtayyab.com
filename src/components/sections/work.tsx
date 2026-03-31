@@ -11,6 +11,9 @@ const WorkSection = () => {
         <div className="self-center">
           <Tag label="Work" />
         </div>
+        <Typography variant="h2" className="text-center">
+          Featured Projects
+        </Typography>
         <Typography variant="subtitle" className="max-w-xl text-center">
           Some of the noteworthy projects I have built:
         </Typography>

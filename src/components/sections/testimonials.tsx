@@ -11,6 +11,9 @@ const TestimonialsSection = () => {
         <div className="self-center">
           <Tag label="Testimonials" />
         </div>
+        <Typography variant="h2" className="text-center">
+          What People Say
+        </Typography>
         <Typography variant="subtitle" className="max-w-xl text-center">
           Nice things people have said about me:
         </Typography>

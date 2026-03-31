@@ -9,9 +9,34 @@ import Tag from '@/components/data-display/tag';
 export const revalidate = 60;
 
 export const metadata: Metadata = {
-  title: 'Blog | Muhammad Tayyab',
+  title: 'Blog — Web Dev Articles | Muhammad Tayyab',
   description:
-    'Thoughts on software development, web technologies, and engineering from Muhammad Tayyab.',
+    'Web development articles, tutorials, and engineering insights from Muhammad Tayyab — Full Stack Developer from Peshawar, Pakistan.',
+  alternates: {
+    canonical: 'https://www.iamtayyab.com/blog',
+  },
+  openGraph: {
+    title: 'Blog — Web Dev Articles | Muhammad Tayyab',
+    description:
+      'Web development articles, tutorials, and engineering insights from Muhammad Tayyab.',
+    url: 'https://www.iamtayyab.com/blog',
+    type: 'website',
+    images: [
+      {
+        url: 'https://www.iamtayyab.com/images/open-graph-tayyab.png',
+        width: 1200,
+        height: 630,
+        alt: 'Muhammad Tayyab — Full Stack Developer Portfolio',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Blog — Web Dev Articles | Muhammad Tayyab',
+    description:
+      'Web development articles, tutorials, and engineering insights from Muhammad Tayyab.',
+    images: 'https://www.iamtayyab.com/images/open-graph-tayyab.png',
+  },
 };
 
 function formatDate(dateStr: string) {
