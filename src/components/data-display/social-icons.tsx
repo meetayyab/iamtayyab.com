@@ -9,9 +9,10 @@ const SocialIcons = () => {
       {SOCIAL_LINKS.map((socialLink, index) => (
         <IconButton
           key={index}
+          aria-label={socialLink.label}
           onClick={() => window.open(socialLink.url, '_blank')}
         >
-          <socialLink.icon />
+          <socialLink.icon aria-hidden="true" />
         </IconButton>
       ))}
     </div>

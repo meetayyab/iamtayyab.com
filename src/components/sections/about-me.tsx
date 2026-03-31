@@ -10,8 +10,13 @@ import { EXTERNAL_LINKS } from '@/lib/data';
 const AboutMeSection = () => {
   return (
     <Container className="bg-gray-50" id="about">
-      <div className="self-center">
-        <Tag label="About me" />
+      <div className="flex flex-col items-center gap-4">
+        <div className="self-center">
+          <Tag label="About me" />
+        </div>
+        <Typography variant="h2" className="text-center">
+          About Me
+        </Typography>
       </div>
 
       <div className="flex w-full flex-col justify-between gap-12 md:flex-row">

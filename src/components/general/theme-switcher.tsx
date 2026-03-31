@@ -21,15 +21,18 @@ const ThemeSwitcher = () => {
   // until the UI is mounted, display a dummy icon
   if (!mounted) {
     return (
-      <IconButton>
-        <Sun />
+      <IconButton aria-label="Toggle theme">
+        <Sun aria-hidden="true" />
       </IconButton>
     );
   }
 
   return (
-    <IconButton onClick={toggleTheme}>
-      {theme === 'dark' ? <Sun /> : <MoonStar />}
+    <IconButton
+      onClick={toggleTheme}
+      aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+    >
+      {theme === 'dark' ? <Sun aria-hidden="true" /> : <MoonStar aria-hidden="true" />}
     </IconButton>
   );
 };

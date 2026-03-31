@@ -261,7 +261,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             </div>
             <div>
               <p className="text-sm font-semibold text-gray-800">Muhammad Tayyab</p>
-              <div className="flex items-center gap-2 text-sm text-gray-400">
+              <div className="flex items-center gap-2 text-sm text-gray-500">
                 <span>{formatDate(post.publishedAt)}</span>
                 {post.estimatedReadingTime > 0 && (
                   <>
@@ -311,7 +311,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               </svg>
               Back to all posts
             </Link>
-            <div className="text-sm text-gray-400">Thanks for reading 🙏</div>
+            <div className="text-sm text-gray-500">Thanks for reading 🙏</div>
           </div>
 
         </div>

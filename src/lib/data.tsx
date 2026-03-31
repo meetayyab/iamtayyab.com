@@ -76,14 +76,17 @@ export const SOCIAL_LINKS = [
   {
     icon: Github,
     url: 'https://github.com/meetayyab',
+    label: 'GitHub',
   },
   {
     icon: Twitter,
     url: 'https://x.com/iamtayyabx',
+    label: 'Twitter / X',
   },
   {
     icon: Linkedin,
     url: 'https://www.linkedin.com/in/immtayyab',
+    label: 'LinkedIn',
   },
 ];
 

@@ -62,8 +62,9 @@ const ProjectDetails = ({
           noCustomization
           className="self-start rounded-lg p-1.5 hover:bg-gray-50 [&_svg]:stroke-gray-500"
           externalLink
+          aria-label={`View ${name} project`}
         >
-          <ExternalLink />
+          <ExternalLink aria-hidden="true" />
         </Link>
       </div>
     </Card>
