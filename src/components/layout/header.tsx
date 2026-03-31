@@ -65,16 +65,16 @@ const Header = () => {
 
         <Drawer open={isOpen} onOpenChange={setIsOpen}>
           <DrawerTrigger asChild className="flex md:hidden">
-            <IconButton>
-              <Menu />
+            <IconButton aria-label="Open navigation menu">
+              <Menu aria-hidden="true" />
             </IconButton>
           </DrawerTrigger>
           <DrawerContent>
             <div className="flex items-center justify-between border-b border-gray-100 p-4">
               <Logo />
               <DrawerClose asChild>
-                <IconButton>
-                  <X />
+                <IconButton aria-label="Close navigation menu">
+                  <X aria-hidden="true" />
                 </IconButton>
               </DrawerClose>
             </div>
