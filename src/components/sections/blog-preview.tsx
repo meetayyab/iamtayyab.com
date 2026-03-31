@@ -5,8 +5,6 @@ import Container from '@/components/layout/container';
 import Tag from '@/components/data-display/tag';
 import Typography from '@/components/general/typography';
 
-export const revalidate = 60;
-
 function formatDate(dateStr: string) {
   return new Date(dateStr).toLocaleDateString('en-US', {
     year: 'numeric',
