@@ -62,7 +62,7 @@ export default async function BlogPreviewSection() {
                 <h3 className="font-semibold text-base text-gray-900 line-clamp-2 leading-snug">
                   {post.title}
                 </h3>
-                <p className="mt-1 text-xs text-gray-400">{formatDate(post.publishedAt)}</p>
+                <p className="mt-1 text-xs text-gray-500">{formatDate(post.publishedAt)}</p>
               </div>
             </Link>
           ))}

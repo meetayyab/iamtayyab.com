@@ -152,7 +152,7 @@ export default async function BlogPage() {
                   </div>
                   <div className="flex flex-col">
                     <span className="text-xs font-medium text-gray-700 dark:text-gray-400">Muhammad Tayyab</span>
-                    <div className="flex items-center gap-1 text-[11px] text-gray-400">
+                    <div className="flex items-center gap-1 text-[11px] text-gray-500">
                       <span>{formatDate(post.publishedAt)}</span>
                       {post.estimatedReadingTime > 0 && (
                         <>

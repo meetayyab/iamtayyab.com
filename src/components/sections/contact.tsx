@@ -59,7 +59,7 @@ const ContactSection = () => {
       <div className="flex flex-col items-center gap-6 md:gap-12">
         <div className="flex flex-col items-center md:gap-4">
           <div className="flex items-center gap-4 md:gap-5">
-            <Mail className="h-6 w-6 md:h-8 md:w-8" />
+            <Mail className="h-6 w-6 md:h-8 md:w-8" aria-hidden="true" />
             {/* <Link href={`mailto:${email}`}> */}
             <Typography variant="h2">{email}</Typography>
             {/* </Link> */}
@@ -68,12 +68,13 @@ const ContactSection = () => {
               onClick={() => handleCopyClick(email, 'email')}
               showTooltip={isCopied && copiedValueType === 'email'}
               tooltipText="Copied!"
+              aria-label="Copy email address"
             >
-              <Copy />
+              <Copy aria-hidden="true" />
             </IconButton>
           </div>
           <div className="flex items-center gap-4 md:gap-5">
-            <Phone className="h-6 w-6 md:h-8 md:w-8" />
+            <Phone className="h-6 w-6 md:h-8 md:w-8" aria-hidden="true" />
             {/* <Link href={`tel:${phone.replace(' ', '')}`}> */}
             <Typography variant="h2">{phone}</Typography>
             {/* </Link> */}
@@ -82,8 +83,9 @@ const ContactSection = () => {
               onClick={() => handleCopyClick(phone.replace(' ', ''), 'phone')}
               showTooltip={isCopied && copiedValueType === 'phone'}
               tooltipText="Copied!"
+              aria-label="Copy phone number"
             >
-              <Copy />
+              <Copy aria-hidden="true" />
             </IconButton>
           </div>
         </div>

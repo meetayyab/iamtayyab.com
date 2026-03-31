@@ -46,7 +46,7 @@ const HeroSection = () => {
           </div>
           <div className="flex flex-col gap-2">
             <div className="flex gap-2">
-              <MapPin className="stroke-gray-600" />
+              <MapPin className="stroke-gray-600" aria-hidden="true" />
               <Typography>Peshawar, Pakistan</Typography>
             </div>
 
