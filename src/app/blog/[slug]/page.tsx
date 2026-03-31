@@ -30,6 +30,9 @@ export async function generateMetadata({
   return {
     title: `${title} | Muhammad Tayyab`,
     description,
+    alternates: {
+      canonical: `https://www.iamtayyab.com/blog/${slug}`,
+    },
     openGraph: {
       title,
       description,
@@ -176,14 +179,40 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const post = await getPost(slug);
   if (!post) notFound();
 
+  const canonicalUrl = `https://www.iamtayyab.com/blog/${slug}`;
+  const imageUrl = post.coverImage
+    ? urlFor(post.coverImage).width(1200).height(630).url()
+    : 'https://www.iamtayyab.com/images/open-graph-tayyab.png';
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: post.title,
     description: post.excerpt,
+    url: canonicalUrl,
     datePublished: post.publishedAt,
-    author: { '@type': 'Person', name: 'Muhammad Tayyab', url: 'https://iamtayyab.com' },
-    ...(post.coverImage ? { image: urlFor(post.coverImage).width(1200).height(630).url() } : {}),
+    dateModified: post.dateModified || post.publishedAt,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': canonicalUrl,
+    },
+    author: {
+      '@type': 'Person',
+      name: 'Muhammad Tayyab',
+      url: 'https://www.iamtayyab.com',
+    },
+    publisher: {
+      '@type': 'Person',
+      name: 'Muhammad Tayyab',
+      url: 'https://www.iamtayyab.com',
+    },
+    image: {
+      '@type': 'ImageObject',
+      url: imageUrl,
+      width: 1200,
+      height: 630,
+    },
+    ...(post.tags && post.tags.length > 0 ? { keywords: post.tags.join(', ') } : {}),
   };
 
   return (

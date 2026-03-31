@@ -38,6 +38,7 @@ export async function getPost(slug: string) {
       excerpt,
       coverImage,
       publishedAt,
+      "dateModified": _updatedAt,
       tags,
       body,
       seoTitle,

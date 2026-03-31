@@ -11,6 +11,9 @@ const ExperienceSection = () => {
         <div className="self-center">
           <Tag label="Experience" />
         </div>
+        <Typography variant="h2" className="text-center">
+          Work Experience
+        </Typography>
         <Typography variant="subtitle" className="max-w-xl text-center">
           Here is a quick summary of my most recent experiences:
         </Typography>

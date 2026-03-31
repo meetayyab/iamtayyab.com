@@ -11,6 +11,9 @@ const SkillsSection = () => {
         <div className="self-center">
           <Tag label="Skills" />
         </div>
+        <Typography variant="h2" className="text-center">
+          Skills &amp; Technologies
+        </Typography>
         <Typography variant="subtitle" className="max-w-xl text-center">
           The skills, tools and technologies I am really good at:
         </Typography>
