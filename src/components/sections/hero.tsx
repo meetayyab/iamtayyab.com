@@ -1,8 +1,10 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { MapPin } from 'lucide-react';
 
 import TayyabHeadshot from '../../../public/images/tayyab-headshot.jpg';
 import SocialIcons from '@/components/data-display/social-icons';
+import Button from '@/components/general/button';
 import Typography from '@/components/general/typography';
 import Container from '@/components/layout/container';
 
@@ -56,10 +58,15 @@ const HeroSection = () => {
                   <span className="relative inline-flex h-3 w-3 rounded-full bg-emerald-500"></span>
                 </span>
               </div>
-              <Typography>Available for hire on new projects</Typography>
+              <Typography>Available for hire on freelance projects</Typography>
             </div>
           </div>
-          <SocialIcons />
+          <div className="flex flex-wrap items-center gap-4">
+            <Button asChild>
+              <Link href="/#contact">Hire me</Link>
+            </Button>
+            <SocialIcons />
+          </div>
         </div>
       </div>
     </Container>

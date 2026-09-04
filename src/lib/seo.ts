@@ -1,6 +1,10 @@
 export const SITE_URL = 'https://www.iamtayyab.com';
+export const PERSON_ID = `${SITE_URL}/#person`;
+export const SERVICE_ID = `${SITE_URL}/#service`;
+export const WEBSITE_ID = `${SITE_URL}/#website`;
+
 export const PERSON_NAME = 'Muhammad Tayyab';
-export const PERSON_JOB_TITLE = 'Full Stack Developer';
+export const PERSON_JOB_TITLE = 'Full Stack and Mobile Developer';
 export const PERSON_IMAGE = `${SITE_URL}/images/tayyab-headshot.jpg`;
 
 export const PERSON_DESCRIPTION =
@@ -66,10 +70,82 @@ export const HIRE_FAQS: FaqItem[] = [
   },
 ];
 
+/** Strip a trailing brand suffix so layout title.template does not duplicate it. */
+export function stripBrandSuffix(title: string): string {
+  return title.replace(/\s*\|\s*Muhammad Tayyab\s*$/i, '').trim();
+}
+
+function portableTextPlain(block: any): string {
+  if (!block?.children || !Array.isArray(block.children)) return '';
+  return block.children.map((child: any) => child?.text ?? '').join('').trim();
+}
+
+/**
+ * Extract FAQPage Q&A only when the post body has an H2 FAQ section with
+ * H3 questions followed by answer paragraphs (matches visible content).
+ */
+export function extractFaqFromPortableText(body: unknown): FaqItem[] {
+  if (!Array.isArray(body)) return [];
+
+  const faqs: FaqItem[] = [];
+  let inFaq = false;
+  let currentQuestion: string | null = null;
+  let answerParts: string[] = [];
+
+  const flush = () => {
+    if (currentQuestion && answerParts.length > 0) {
+      faqs.push({
+        question: currentQuestion,
+        answer: answerParts.join(' ').replace(/\s+/g, ' ').trim(),
+      });
+    }
+    currentQuestion = null;
+    answerParts = [];
+  };
+
+  for (const block of body) {
+    if (!block || block._type !== 'block') continue;
+
+    const style = block.style || 'normal';
+    const text = portableTextPlain(block);
+    if (!text) continue;
+
+    if (style === 'h2') {
+      const isFaqHeading =
+        /^faq$/i.test(text) || /^frequently asked questions$/i.test(text);
+      if (isFaqHeading) {
+        flush();
+        inFaq = true;
+        continue;
+      }
+      if (inFaq) {
+        flush();
+        inFaq = false;
+      }
+      continue;
+    }
+
+    if (!inFaq) continue;
+
+    if (style === 'h3') {
+      flush();
+      currentQuestion = text;
+      continue;
+    }
+
+    if ((style === 'normal' || style === 'blockquote') && currentQuestion) {
+      answerParts.push(text);
+    }
+  }
+
+  flush();
+  return faqs;
+}
+
 export function buildPersonSchema(extras: Record<string, unknown> = {}) {
   return {
-    '@context': 'https://schema.org',
     '@type': 'Person',
+    '@id': PERSON_ID,
     name: PERSON_NAME,
     url: SITE_URL,
     jobTitle: PERSON_JOB_TITLE,
@@ -88,35 +164,27 @@ export function buildPersonSchema(extras: Record<string, unknown> = {}) {
 
 export function buildWebsiteSchema() {
   return {
-    '@context': 'https://schema.org',
     '@type': 'WebSite',
+    '@id': WEBSITE_ID,
     name: PERSON_NAME,
     url: SITE_URL,
     description: PERSON_DESCRIPTION,
-    author: {
-      '@type': 'Person',
-      name: PERSON_NAME,
-      url: SITE_URL,
-    },
+    publisher: { '@id': PERSON_ID },
+    author: { '@id': PERSON_ID },
   };
 }
 
 export function buildProfessionalServiceSchema() {
   return {
-    '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
+    '@id': SERVICE_ID,
     name: 'Muhammad Tayyab — Full Stack & Mobile Development',
     url: SITE_URL,
+    image: `${SITE_URL}/images/open-graph-tayyab.png`,
     description:
       'Freelance full stack and mobile development services including Angular, React.js, React Native, SwiftUI, and Node.js applications. Based in Peshawar, Pakistan.',
-    provider: {
-      '@type': 'Person',
-      name: PERSON_NAME,
-      url: SITE_URL,
-      jobTitle: PERSON_JOB_TITLE,
-      sameAs: PERSON_SAME_AS,
-    },
-    areaServed: 'Worldwide',
+    provider: { '@id': PERSON_ID },
+    areaServed: ['PK', 'Worldwide'],
     serviceType: [
       'Full Stack Web Development',
       'Mobile App Development',
@@ -127,9 +195,22 @@ export function buildProfessionalServiceSchema() {
   };
 }
 
+/** Linked Person + ProfessionalService + WebSite for the homepage. */
+export function buildHomepageGraph() {
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      buildPersonSchema(),
+      buildProfessionalServiceSchema(),
+      buildWebsiteSchema(),
+    ],
+  };
+}
+
 export function buildBlogPostingAuthor() {
   return {
     '@type': 'Person',
+    '@id': PERSON_ID,
     name: PERSON_NAME,
     url: SITE_URL,
     jobTitle: PERSON_JOB_TITLE,
@@ -151,5 +232,30 @@ export function buildFaqPageSchema(questions: FaqItem[]) {
         text: answer,
       },
     })),
+  };
+}
+
+export function buildBlogCollectionSchema(
+  posts: Array<{ title: string; slug: { current: string }; publishedAt?: string }>
+) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': `${SITE_URL}/blog#collection`,
+    name: 'Blog — Writings by Muhammad Tayyab',
+    description:
+      'Web development articles and engineering insights from Muhammad Tayyab, Full Stack and Mobile Developer in Peshawar, Pakistan.',
+    url: `${SITE_URL}/blog`,
+    isPartOf: { '@id': WEBSITE_ID },
+    author: { '@id': PERSON_ID },
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: posts.map((post, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        url: `${SITE_URL}/blog/${post.slug.current}`,
+        name: post.title,
+      })),
+    },
   };
 }

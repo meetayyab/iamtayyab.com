@@ -25,7 +25,10 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(url),
-  title,
+  title: {
+    default: title,
+    template: '%s | Muhammad Tayyab',
+  },
   description,
   keywords: [
     'Muhammad Tayyab',

@@ -9,17 +9,9 @@ import TestimonialsSection from '@/components/sections/testimonials';
 import WorkSection from '@/components/sections/work';
 import BlogPreviewSection from '@/components/sections/blog-preview';
 import HireFaqSection from '@/components/sections/hire-faq';
-import {
-  buildFaqPageSchema,
-  buildPersonSchema,
-  buildProfessionalServiceSchema,
-  buildWebsiteSchema,
-  HIRE_FAQS,
-} from '@/lib/seo';
+import { buildFaqPageSchema, buildHomepageGraph, HIRE_FAQS } from '@/lib/seo';
 
-const personJsonLd = buildPersonSchema();
-const websiteJsonLd = buildWebsiteSchema();
-const professionalServiceJsonLd = buildProfessionalServiceSchema();
+const homepageGraphJsonLd = buildHomepageGraph();
 const faqJsonLd = buildFaqPageSchema(HIRE_FAQS);
 
 export default function Home() {
@@ -27,16 +19,8 @@ export default function Home() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(professionalServiceJsonLd),
+          __html: JSON.stringify(homepageGraphJsonLd),
         }}
       />
       <script
