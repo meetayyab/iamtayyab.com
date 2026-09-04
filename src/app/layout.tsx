@@ -9,9 +9,9 @@ import Footer from '@/components/layout/footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
-const title = 'Muhammad Tayyab | Full Stack Developer From Peshawar, Pakistan.';
+const title = 'Muhammad Tayyab | Full Stack Developer From Lahore, Pakistan.';
 const description =
-  'Hire Muhammad Tayyab — Full Stack and Mobile Developer in Peshawar, Pakistan. Specializing in Angular, React.js, React Native, SwiftUI, and Node.js for freelance web and mobile projects.';
+  'Hire Muhammad Tayyab — Full Stack and Mobile Developer in Lahore, Pakistan. Specializing in Angular, React.js, React Native, SwiftUI, and Node.js for freelance web and mobile projects.';
 const url = 'https://www.iamtayyab.com';
 
 const GTM_ID = 'GTM-P5F4JJ5T';
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     'JavaScript Developer',
     'SwiftUI Developer',
     'Freelance Developer Pakistan',
-    'Web Developer Peshawar',
+    'Web Developer Lahore',
     'Full Stack Developer Pakistan',
   ],
   authors: [{ name: 'Muhammad Tayyab', url: 'https://www.iamtayyab.com' }],

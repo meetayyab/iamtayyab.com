@@ -12,7 +12,7 @@ export const revalidate = 60;
 export const metadata: Metadata = {
   title: 'Blog — Web Dev Articles',
   description:
-    'Web development articles, tutorials, and engineering insights from Muhammad Tayyab — Full Stack Developer from Peshawar, Pakistan.',
+    'Web development articles, tutorials, and engineering insights from Muhammad Tayyab — Full Stack Developer from Lahore, Pakistan.',
   alternates: {
     canonical: `${SITE_URL}/blog`,
   },
@@ -85,7 +85,7 @@ export default async function BlogPage() {
           </Typography>
           <Typography variant="subtitle" className="max-w-xl text-center">
             Thoughts on software development, web technologies, and things
-            learned shipping full stack and mobile products from Peshawar,
+            learned shipping full stack and mobile products from Lahore,
             Pakistan.
           </Typography>
         </div>

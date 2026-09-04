@@ -15,7 +15,7 @@ const AuthorBio = () => {
               Written by Muhammad Tayyab
             </Typography>
             <Typography className="mt-1 text-sm text-gray-600">
-              Full Stack and Mobile Developer in Peshawar, Pakistan. Builds with
+              Full Stack and Mobile Developer in Lahore, Pakistan. Builds with
               Angular, React.js, React Native, SwiftUI, and Node.js. Available
               for freelance web and mobile projects.
             </Typography>

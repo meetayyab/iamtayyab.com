@@ -17,7 +17,7 @@ const HeroSection = () => {
           <div className="relative h-[300px] w-[280px] md:h-[360px] md:w-[320px]">
             <Image
               src={TayyabHeadshot}
-              alt="Muhammad Tayyab — Full Stack Developer from Peshawar, Pakistan"
+              alt="Muhammad Tayyab — Full Stack Developer from Lahore, Pakistan"
               className="absolute z-10 h-[280px] w-[240px] border-8 border-gray max-md:left-5 md:left-0 md:top-0 md:h-[320px] md:w-[280px]"
               style={{ objectFit: 'cover' }}
             ></Image>
@@ -35,7 +35,7 @@ const HeroSection = () => {
               <span className="inline-block animate-waving-hand">👋</span>
             </Typography>
             <Typography>
-              Muhammad Tayyab is a Full Stack and Mobile Developer in Peshawar,
+              Muhammad Tayyab is a Full Stack and Mobile Developer in Lahore,
               Pakistan, with expertise in Angular, React.js, React Native,
               SwiftUI, and Node.js. With over three years of experience, he
               builds efficient backends and user-friendly, responsive interfaces
@@ -48,7 +48,7 @@ const HeroSection = () => {
           <div className="flex flex-col gap-2">
             <div className="flex gap-2">
               <MapPin className="stroke-gray-600" aria-hidden="true" />
-              <Typography>Peshawar, Pakistan</Typography>
+              <Typography>Lahore, Pakistan</Typography>
             </div>
 
             <div className="flex items-center gap-2">

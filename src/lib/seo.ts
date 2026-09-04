@@ -8,7 +8,7 @@ export const PERSON_JOB_TITLE = 'Full Stack and Mobile Developer';
 export const PERSON_IMAGE = `${SITE_URL}/images/tayyab-headshot.jpg`;
 
 export const PERSON_DESCRIPTION =
-  'Full Stack and Mobile Developer specializing in Angular, React.js, React Native, SwiftUI, and Node.js, based in Peshawar, Pakistan. Available for freelance web and mobile projects.';
+  'Full Stack and Mobile Developer specializing in Angular, React.js, React Native, SwiftUI, and Node.js, based in Lahore, Pakistan. Available for freelance web and mobile projects.';
 
 export const SOCIAL_URLS = {
   github: 'https://github.com/meetayyab',
@@ -56,7 +56,7 @@ export const HIRE_FAQS: FaqItem[] = [
   {
     question: 'Who is Muhammad Tayyab?',
     answer:
-      'Muhammad Tayyab is a Full Stack and Mobile Developer based in Peshawar, Pakistan. He specializes in Angular, React.js, React Native, SwiftUI, and Node.js, and builds web and mobile products end to end.',
+      'Muhammad Tayyab is a Full Stack and Mobile Developer based in Lahore, Pakistan. He specializes in Angular, React.js, React Native, SwiftUI, and Node.js, and builds web and mobile products end to end.',
   },
   {
     question: 'What kind of projects can I hire Muhammad Tayyab for?',
@@ -152,7 +152,7 @@ export function buildPersonSchema(extras: Record<string, unknown> = {}) {
     description: PERSON_DESCRIPTION,
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Peshawar',
+      addressLocality: 'Lahore',
       addressCountry: 'PK',
     },
     image: PERSON_IMAGE,
@@ -182,7 +182,7 @@ export function buildProfessionalServiceSchema() {
     url: SITE_URL,
     image: `${SITE_URL}/images/open-graph-tayyab.png`,
     description:
-      'Freelance full stack and mobile development services including Angular, React.js, React Native, SwiftUI, and Node.js applications. Based in Peshawar, Pakistan.',
+      'Freelance full stack and mobile development services including Angular, React.js, React Native, SwiftUI, and Node.js applications. Based in Lahore, Pakistan.',
     provider: { '@id': PERSON_ID },
     areaServed: ['PK', 'Worldwide'],
     serviceType: [
@@ -244,7 +244,7 @@ export function buildBlogCollectionSchema(
     '@id': `${SITE_URL}/blog#collection`,
     name: 'Blog — Writings by Muhammad Tayyab',
     description:
-      'Web development articles and engineering insights from Muhammad Tayyab, Full Stack and Mobile Developer in Peshawar, Pakistan.',
+      'Web development articles and engineering insights from Muhammad Tayyab, Full Stack and Mobile Developer in Lahore, Pakistan.',
     url: `${SITE_URL}/blog`,
     isPartOf: { '@id': WEBSITE_ID },
     author: { '@id': PERSON_ID },

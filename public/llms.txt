@@ -1,12 +1,12 @@
 # Muhammad Tayyab
 
-> Full Stack and Mobile Developer in Peshawar, Pakistan. Specializes in Angular, React.js, React Native, SwiftUI, and Node.js. Available for freelance web and mobile projects.
+> Full Stack and Mobile Developer in Lahore, Pakistan. Specializes in Angular, React.js, React Native, SwiftUI, and Node.js. Available for freelance web and mobile projects.
 
 ## Who
 
 - Name: Muhammad Tayyab
 - Role: Full Stack Developer / Mobile Developer
-- Location: Peshawar, Pakistan
+- Location: Lahore, Pakistan
 - Site: https://www.iamtayyab.com
 
 ## What he builds
