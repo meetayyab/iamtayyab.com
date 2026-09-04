@@ -52,15 +52,15 @@ export const GTM_ID = 'GTM-P5F4JJ5T';
 export const NAV_LINKS = [
   {
     label: 'About',
-    href: '#about',
+    href: '/#about',
   },
   {
     label: 'Work',
-    href: '#work',
+    href: '/#work',
   },
   {
     label: 'Testimonials',
-    href: '#testimonials',
+    href: '/#testimonials',
   },
   {
     label: 'Blog',
@@ -68,7 +68,7 @@ export const NAV_LINKS = [
   },
   {
     label: 'Contact',
-    href: '#contact',
+    href: '/#contact',
   },
 ];
 
