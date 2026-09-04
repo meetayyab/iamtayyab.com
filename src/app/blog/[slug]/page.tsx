@@ -4,6 +4,14 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { PortableText, PortableTextComponents } from '@portabletext/react';
 import { getPosts, getPost, urlFor } from '@/lib/sanity';
+import {
+  buildBlogPostingAuthor,
+  buildFaqPageSchema,
+  extractFaqFromPortableText,
+  SITE_URL,
+  stripBrandSuffix,
+} from '@/lib/seo';
+import AuthorBio from '@/components/blog/author-bio';
 import Container from '@/components/layout/container';
 import Typography from '@/components/general/typography';
 
@@ -22,29 +30,39 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = await getPost(slug);
   if (!post) return {};
-  const title = post.seoTitle || post.title;
+  const pageTitle = stripBrandSuffix(post.seoTitle || post.title);
+  const brandedTitle = `${pageTitle} | Muhammad Tayyab`;
   const description = post.seoDescription || post.excerpt;
   const imageUrl = post.coverImage
     ? urlFor(post.coverImage).width(1200).height(630).url()
     : undefined;
+  const canonicalUrl = `${SITE_URL}/blog/${slug}`;
   return {
-    title: `${title} | Muhammad Tayyab`,
+    // Use absolute so layout title.template does not append a second brand suffix
+    // when seoTitle already included "| Muhammad Tayyab".
+    title: { absolute: brandedTitle },
     description,
     alternates: {
-      canonical: `https://www.iamtayyab.com/blog/${slug}`,
+      canonical: canonicalUrl,
     },
     openGraph: {
-      title,
+      title: brandedTitle,
       description,
+      url: canonicalUrl,
+      siteName: 'Muhammad Tayyab',
+      locale: 'en_US',
       type: 'article',
       publishedTime: post.publishedAt,
+      modifiedTime: post.dateModified || post.publishedAt,
       authors: ['Muhammad Tayyab'],
       ...(imageUrl ? { images: [{ url: imageUrl }] } : {}),
     },
     twitter: {
       card: 'summary_large_image',
-      title,
+      title: brandedTitle,
       description,
+      creator: '@iamtayyabx',
+      site: '@iamtayyabx',
       ...(imageUrl ? { images: [imageUrl] } : {}),
     },
   };
@@ -179,10 +197,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const post = await getPost(slug);
   if (!post) notFound();
 
-  const canonicalUrl = `https://www.iamtayyab.com/blog/${slug}`;
+  const canonicalUrl = `${SITE_URL}/blog/${slug}`;
   const imageUrl = post.coverImage
     ? urlFor(post.coverImage).width(1200).height(630).url()
-    : 'https://www.iamtayyab.com/images/open-graph-tayyab.png';
+    : `${SITE_URL}/images/open-graph-tayyab.png`;
+
+  const author = buildBlogPostingAuthor();
+  const faqs = extractFaqFromPortableText(post.body);
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -196,16 +217,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       '@type': 'WebPage',
       '@id': canonicalUrl,
     },
-    author: {
-      '@type': 'Person',
-      name: 'Muhammad Tayyab',
-      url: 'https://www.iamtayyab.com',
-    },
-    publisher: {
-      '@type': 'Person',
-      name: 'Muhammad Tayyab',
-      url: 'https://www.iamtayyab.com',
-    },
+    author,
+    publisher: author,
     image: {
       '@type': 'ImageObject',
       url: imageUrl,
@@ -221,6 +234,14 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      {faqs.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(buildFaqPageSchema(faqs)),
+          }}
+        />
+      )}
       <Container>
         <div className="mx-auto w-full max-w-3xl">
 
@@ -300,8 +321,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             </div>
           )}
 
+          <AuthorBio />
+
           {/* Footer */}
-          <div className="mt-16 flex items-center justify-between border-t border-gray-100 pt-8">
+          <div className="mt-10 flex items-center justify-between border-t border-gray-100 pt-8">
             <Link
               href="/blog"
               className="inline-flex items-center gap-1.5 rounded-full border border-gray-200 px-4 py-1.5 text-sm text-gray-500 transition-all hover:border-violet-300 hover:text-violet-600"

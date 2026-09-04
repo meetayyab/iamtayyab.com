@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: 'Muhammad Tayyab — Full Stack Developer Portfolio',
     short_name: 'MT Portfolio',
     description:
-      'Full Stack Developer specializing in Angular, React.js, React Native, and Node.js, based in Peshawar, Pakistan.',
+      'Full Stack Developer specializing in Angular, React.js, React Native, and Node.js, based in Lahore, Pakistan.',
     start_url: '/',
     display: 'standalone',
     background_color: '#ffffff',

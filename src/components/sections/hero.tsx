@@ -1,8 +1,10 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { MapPin } from 'lucide-react';
 
 import TayyabHeadshot from '../../../public/images/tayyab-headshot.jpg';
 import SocialIcons from '@/components/data-display/social-icons';
+import Button from '@/components/general/button';
 import Typography from '@/components/general/typography';
 import Container from '@/components/layout/container';
 
@@ -15,7 +17,7 @@ const HeroSection = () => {
           <div className="relative h-[300px] w-[280px] md:h-[360px] md:w-[320px]">
             <Image
               src={TayyabHeadshot}
-              alt="Muhammad Tayyab — Full Stack Developer from Peshawar, Pakistan"
+              alt="Muhammad Tayyab — Full Stack Developer from Lahore, Pakistan"
               className="absolute z-10 h-[280px] w-[240px] border-8 border-gray max-md:left-5 md:left-0 md:top-0 md:h-[320px] md:w-[280px]"
               style={{ objectFit: 'cover' }}
             ></Image>
@@ -33,21 +35,20 @@ const HeroSection = () => {
               <span className="inline-block animate-waving-hand">👋</span>
             </Typography>
             <Typography>
-              I&apos;m a Full Stack and Mobile Developer with expertise in Angular, React.js, React Native, SwiftUI,
-              and Node.js, committed to building dynamic and scalable web
-              applications. With over three years of experience, I excel at
-              developing efficient backend solutions and creating user-friendly, 
-              responsive interfaces. My work spans across designing intuitive
-              web applications and managing complex databases with MySQL,
-              PostgreSQL, and MongoDB. I&apos;m driven by a passion for
-              problem-solving and innovation, ensuring that each project I
-              undertake meets the highest standards of quality and performance.
+              Muhammad Tayyab is a Full Stack and Mobile Developer in Lahore,
+              Pakistan, with expertise in Angular, React.js, React Native,
+              SwiftUI, and Node.js. With over three years of experience, he
+              builds efficient backends and user-friendly, responsive interfaces
+              — and is available for hire on freelance web and mobile projects.
+              His work spans designing intuitive applications and managing
+              databases with MySQL, PostgreSQL, and MongoDB, with a focus on
+              quality and performance.
             </Typography>
           </div>
           <div className="flex flex-col gap-2">
             <div className="flex gap-2">
               <MapPin className="stroke-gray-600" aria-hidden="true" />
-              <Typography>Peshawar, Pakistan</Typography>
+              <Typography>Lahore, Pakistan</Typography>
             </div>
 
             <div className="flex items-center gap-2">
@@ -57,10 +58,15 @@ const HeroSection = () => {
                   <span className="relative inline-flex h-3 w-3 rounded-full bg-emerald-500"></span>
                 </span>
               </div>
-              <Typography>Available for new projects</Typography>
+              <Typography>Available for hire on freelance projects</Typography>
             </div>
           </div>
-          <SocialIcons />
+          <div className="flex flex-wrap items-center gap-4">
+            <Button asChild>
+              <Link href="/#contact">Hire me</Link>
+            </Button>
+            <SocialIcons />
+          </div>
         </div>
       </div>
     </Container>
