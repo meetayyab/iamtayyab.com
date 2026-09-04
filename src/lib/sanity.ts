@@ -23,6 +23,7 @@ export async function getPosts() {
       excerpt,
       coverImage,
       publishedAt,
+      "dateModified": _updatedAt,
       tags,
       "estimatedReadingTime": round(length(pt::text(body)) / 5 / 180)
     }`

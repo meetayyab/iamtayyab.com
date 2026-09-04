@@ -33,15 +33,14 @@ const HeroSection = () => {
               <span className="inline-block animate-waving-hand">👋</span>
             </Typography>
             <Typography>
-              I&apos;m a Full Stack and Mobile Developer with expertise in Angular, React.js, React Native, SwiftUI,
-              and Node.js, committed to building dynamic and scalable web
-              applications. With over three years of experience, I excel at
-              developing efficient backend solutions and creating user-friendly, 
-              responsive interfaces. My work spans across designing intuitive
-              web applications and managing complex databases with MySQL,
-              PostgreSQL, and MongoDB. I&apos;m driven by a passion for
-              problem-solving and innovation, ensuring that each project I
-              undertake meets the highest standards of quality and performance.
+              Muhammad Tayyab is a Full Stack and Mobile Developer in Peshawar,
+              Pakistan, with expertise in Angular, React.js, React Native,
+              SwiftUI, and Node.js. With over three years of experience, he
+              builds efficient backends and user-friendly, responsive interfaces
+              — and is available for hire on freelance web and mobile projects.
+              His work spans designing intuitive applications and managing
+              databases with MySQL, PostgreSQL, and MongoDB, with a focus on
+              quality and performance.
             </Typography>
           </div>
           <div className="flex flex-col gap-2">
@@ -57,7 +56,7 @@ const HeroSection = () => {
                   <span className="relative inline-flex h-3 w-3 rounded-full bg-emerald-500"></span>
                 </span>
               </div>
-              <Typography>Available for new projects</Typography>
+              <Typography>Available for hire on new projects</Typography>
             </div>
           </div>
           <SocialIcons />

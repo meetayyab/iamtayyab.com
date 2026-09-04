@@ -4,6 +4,8 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { PortableText, PortableTextComponents } from '@portabletext/react';
 import { getPosts, getPost, urlFor } from '@/lib/sanity';
+import { buildBlogPostingAuthor, SITE_URL } from '@/lib/seo';
+import AuthorBio from '@/components/blog/author-bio';
 import Container from '@/components/layout/container';
 import Typography from '@/components/general/typography';
 
@@ -31,7 +33,7 @@ export async function generateMetadata({
     title: `${title} | Muhammad Tayyab`,
     description,
     alternates: {
-      canonical: `https://www.iamtayyab.com/blog/${slug}`,
+      canonical: `${SITE_URL}/blog/${slug}`,
     },
     openGraph: {
       title,
@@ -179,10 +181,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const post = await getPost(slug);
   if (!post) notFound();
 
-  const canonicalUrl = `https://www.iamtayyab.com/blog/${slug}`;
+  const canonicalUrl = `${SITE_URL}/blog/${slug}`;
   const imageUrl = post.coverImage
     ? urlFor(post.coverImage).width(1200).height(630).url()
-    : 'https://www.iamtayyab.com/images/open-graph-tayyab.png';
+    : `${SITE_URL}/images/open-graph-tayyab.png`;
+
+  const author = buildBlogPostingAuthor();
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -196,16 +200,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       '@type': 'WebPage',
       '@id': canonicalUrl,
     },
-    author: {
-      '@type': 'Person',
-      name: 'Muhammad Tayyab',
-      url: 'https://www.iamtayyab.com',
-    },
-    publisher: {
-      '@type': 'Person',
-      name: 'Muhammad Tayyab',
-      url: 'https://www.iamtayyab.com',
-    },
+    author,
+    publisher: author,
     image: {
       '@type': 'ImageObject',
       url: imageUrl,
@@ -300,8 +296,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             </div>
           )}
 
+          <AuthorBio />
+
           {/* Footer */}
-          <div className="mt-16 flex items-center justify-between border-t border-gray-100 pt-8">
+          <div className="mt-10 flex items-center justify-between border-t border-gray-100 pt-8">
             <Link
               href="/blog"
               className="inline-flex items-center gap-1.5 rounded-full border border-gray-200 px-4 py-1.5 text-sm text-gray-500 transition-all hover:border-violet-300 hover:text-violet-600"
