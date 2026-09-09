@@ -1,8 +1,9 @@
 import { MetadataRoute } from 'next';
 import { getPosts } from '@/lib/sanity';
 
-// Match blog page ISR so new Sanity posts appear in the sitemap within ~1 minute
-export const revalidate = 60;
+// Force dynamic so new Sanity posts appear immediately. ISR (revalidate=60) was
+// leaving a multi-hour Vercel CDN HIT that omitted freshly published slugs.
+export const dynamic = 'force-dynamic';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticUrls: MetadataRoute.Sitemap = [
