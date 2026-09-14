@@ -7,6 +7,7 @@ import SocialIcons from '@/components/data-display/social-icons';
 import Button from '@/components/general/button';
 import Typography from '@/components/general/typography';
 import Container from '@/components/layout/container';
+import NavLink from '@/components/navigation/link';
 
 const HeroSection = () => {
   return (
@@ -65,6 +66,13 @@ const HeroSection = () => {
             <Button asChild>
               <Link href="/#contact">Hire me</Link>
             </Button>
+            <NavLink
+              href="/full-stack-developer-pakistan"
+              noCustomization
+              className="inline-flex items-center justify-center rounded-xl border border-gray-200 bg-gray px-4 py-1.5 font-medium text-gray-900 transition-colors duration-200 hover:bg-gray-50 dark:border-gray-300 dark:hover:bg-gray-100"
+            >
+              Full stack hire page
+            </NavLink>
             <SocialIcons />
           </div>
         </div>
