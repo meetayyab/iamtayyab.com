@@ -235,6 +235,46 @@ export function buildFaqPageSchema(questions: FaqItem[]) {
   };
 }
 
+export const LANDING_PAGE_PATH = '/full-stack-developer-pakistan';
+export const LANDING_PAGE_URL = `${SITE_URL}${LANDING_PAGE_PATH}`;
+export const LANDING_PAGE_ID = `${LANDING_PAGE_URL}/#webpage`;
+export const LANDING_SERVICE_ID = `${LANDING_PAGE_URL}/#service`;
+
+export const LANDING_PAGE_TITLE = 'Full Stack Developer Pakistan';
+export const LANDING_PAGE_DESCRIPTION =
+  'Hire a full stack developer in Pakistan for your US or UK startup. Next.js, React, Node.js, and mobile — async-first delivery from Lahore with proven billing and product outcomes.';
+
+/** Linked Person + ProfessionalService + WebPage for the hire landing page. */
+export function buildLandingPageGraph() {
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      buildPersonSchema(),
+      {
+        ...buildProfessionalServiceSchema(),
+        '@id': LANDING_SERVICE_ID,
+        url: LANDING_PAGE_URL,
+        description:
+          'Full stack and mobile development for US and UK startups. Next.js, React, Node.js, React Native, and SwiftUI — based in Lahore, Pakistan.',
+        areaServed: ['US', 'GB', 'Worldwide'],
+      },
+      {
+        '@type': 'WebPage',
+        '@id': LANDING_PAGE_ID,
+        name: `${LANDING_PAGE_TITLE} — Hire for US & UK Startups`,
+        description: LANDING_PAGE_DESCRIPTION,
+        url: LANDING_PAGE_URL,
+        isPartOf: { '@id': WEBSITE_ID },
+        about: { '@id': PERSON_ID },
+        primaryImageOfPage: {
+          '@type': 'ImageObject',
+          url: `${SITE_URL}/images/open-graph-tayyab.png`,
+        },
+      },
+    ],
+  };
+}
+
 export function buildBlogCollectionSchema(
   posts: Array<{ title: string; slug: { current: string }; publishedAt?: string }>
 ) {
