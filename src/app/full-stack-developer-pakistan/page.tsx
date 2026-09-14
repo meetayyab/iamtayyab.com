@@ -238,8 +238,8 @@ export default function FullStackDeveloperPakistanPage() {
             </div>
           </div>
 
-          <div className="flex flex-shrink-0 items-center justify-center md:ml-auto md:justify-end">
-            <div className="relative h-[240px] w-full max-w-[480px] overflow-hidden rounded-2xl border border-gray-100 shadow-md dark:border-gray-300 sm:h-[280px] md:h-[320px]">
+          <div className="flex w-full items-center justify-center md:order-last md:ml-auto md:w-auto md:flex-grow md:justify-end">
+            <div className="relative h-[240px] w-full max-w-[480px] overflow-hidden rounded-2xl border border-gray-100 shadow-md dark:border-gray-300 sm:h-[280px] md:h-[320px] md:w-[480px]">
               <Image
                 src={HireHubHero}
                 alt="Distributed team collaborating on a product — remote full stack development for US and UK startups"
