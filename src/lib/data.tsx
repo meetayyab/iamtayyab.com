@@ -67,6 +67,10 @@ export const NAV_LINKS = [
     href: '/blog',
   },
   {
+    label: 'Hire',
+    href: '/full-stack-developer-pakistan',
+  },
+  {
     label: 'Contact',
     href: '/#contact',
   },

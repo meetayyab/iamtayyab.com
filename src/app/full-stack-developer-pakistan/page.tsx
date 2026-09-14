@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
 import {
   ArrowRight,
   CheckCircle2,
@@ -9,6 +10,8 @@ import {
   Rocket,
   Sparkles,
 } from 'lucide-react';
+
+import HireHubHero from '../../../public/images/hire-hub-hero.jpg';
 
 import Tag from '@/components/data-display/tag';
 import Button from '@/components/general/button';
@@ -191,46 +194,61 @@ export default function FullStackDeveloperPakistanPage() {
 
       {/* Hero */}
       <Container>
-        <div className="flex flex-col items-center gap-6 text-center">
-          <Tag label="Hire" />
-          <Typography variant="h1" className="max-w-4xl">
-            Full Stack Developer Pakistan
-          </Typography>
-          <Typography variant="subtitle" className="max-w-2xl">
-            For US and UK founders hiring offshore — one senior engineer in
-            Lahore who owns web, mobile, and backend and ships like part of your
-            team.
-          </Typography>
+        <div className="flex flex-col gap-12 md:flex-row md:items-center">
+          <div className="flex flex-col items-center gap-6 text-center md:max-w-2xl md:items-start md:text-left">
+            <Tag label="Hire" />
+            <Typography variant="h1" className="max-w-4xl">
+              Full Stack Developer Pakistan
+            </Typography>
+            <Typography variant="subtitle" className="max-w-2xl">
+              For US and UK founders hiring offshore — one senior engineer in
+              Lahore who owns web, mobile, and backend and ships like part of
+              your team.
+            </Typography>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-600">
-            <span className="inline-flex items-center gap-2">
-              <MapPin className="h-4 w-4 shrink-0" aria-hidden="true" />
-              Lahore, Pakistan
-            </span>
-            <span className="inline-flex items-center gap-2">
-              <span className="relative flex h-3 w-3">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-                <span className="relative inline-flex h-3 w-3 rounded-full bg-emerald-500" />
+            <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-600 md:justify-start">
+              <span className="inline-flex items-center gap-2">
+                <MapPin className="h-4 w-4 shrink-0" aria-hidden="true" />
+                Lahore, Pakistan
               </span>
-              Available for new engagements
-            </span>
+              <span className="inline-flex items-center gap-2">
+                <span className="relative flex h-3 w-3">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+                  <span className="relative inline-flex h-3 w-3 rounded-full bg-emerald-500" />
+                </span>
+                Available for new engagements
+              </span>
+            </div>
+
+            <div className="flex flex-wrap items-center justify-center gap-4 pt-2 md:justify-start">
+              <Button asChild>
+                <Link href="/#contact" noCustomization>
+                  Hire me
+                </Link>
+              </Button>
+              <Link
+                href="https://www.linkedin.com/in/immtayyab"
+                externalLink
+                noCustomization
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-violet-600 hover:text-violet-700 dark:text-violet-400 dark:hover:text-violet-300"
+              >
+                LinkedIn profile
+                <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </Link>
+            </div>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
-            <Button asChild>
-              <Link href="/#contact" noCustomization>
-                Hire me
-              </Link>
-            </Button>
-            <Link
-              href="https://www.linkedin.com/in/immtayyab"
-              externalLink
-              noCustomization
-              className="inline-flex items-center gap-1.5 text-sm font-medium text-violet-600 hover:text-violet-700 dark:text-violet-400 dark:hover:text-violet-300"
-            >
-              LinkedIn profile
-              <ArrowRight className="h-4 w-4" aria-hidden="true" />
-            </Link>
+          <div className="flex flex-shrink-0 items-center justify-center md:ml-auto md:justify-end">
+            <div className="relative h-[240px] w-full max-w-[480px] overflow-hidden rounded-2xl border border-gray-100 shadow-md dark:border-gray-300 sm:h-[280px] md:h-[320px]">
+              <Image
+                src={HireHubHero}
+                alt="Distributed team collaborating on a product — remote full stack development for US and UK startups"
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, 480px"
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
       </Container>
