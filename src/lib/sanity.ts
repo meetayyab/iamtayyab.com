@@ -14,19 +14,34 @@ export function urlFor(source: any) {
   return builder.image(source);
 }
 
+const postListProjection = `{
+  _id,
+  title,
+  slug,
+  excerpt,
+  coverImage,
+  publishedAt,
+  "dateModified": _updatedAt,
+  tags,
+  "estimatedReadingTime": round(length(pt::text(body)) / 5 / 180)
+}`;
+
 export async function getPosts() {
   return client.fetch(
-    `*[_type == "post" && defined(publishedAt)] | order(publishedAt desc) {
-      _id,
-      title,
-      slug,
-      excerpt,
-      coverImage,
-      publishedAt,
-      "dateModified": _updatedAt,
-      tags,
-      "estimatedReadingTime": round(length(pt::text(body)) / 5 / 180)
-    }`
+    `*[_type == "post" && defined(publishedAt)] | order(publishedAt desc) ${postListProjection}`
+  );
+}
+
+export async function getPostCount(): Promise<number> {
+  return client.fetch(`count(*[_type == "post" && defined(publishedAt)])`);
+}
+
+export async function getPostsPage(page: number, pageSize: number) {
+  const start = (page - 1) * pageSize;
+  const end = start + pageSize;
+  return client.fetch(
+    `*[_type == "post" && defined(publishedAt)] | order(publishedAt desc) [$start...$end] ${postListProjection}`,
+    { start, end }
   );
 }
 
