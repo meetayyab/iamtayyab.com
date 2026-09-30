@@ -137,7 +137,7 @@ const portableTextComponents: PortableTextComponents = {
       );
     },
     blockquote: ({ children }: any) => (
-      <blockquote className="my-8 border-l-4 border-violet-400 bg-violet-50 py-3 pl-6 pr-4 rounded-r-xl italic text-gray-600">
+      <blockquote className="my-8 rounded-r-xl border-l-4 border-violet-400 bg-violet-50 py-3 pl-6 pr-4 italic text-gray-600 dark:border-violet-400 dark:bg-zinc-800/90 dark:text-zinc-200">
         {children}
       </blockquote>
     ),
@@ -176,7 +176,7 @@ const portableTextComponents: PortableTextComponents = {
         href={value?.href}
         target="_blank"
         rel="noopener noreferrer"
-        className="font-medium text-violet-600 underline underline-offset-2 transition-colors hover:text-violet-800"
+        className="font-medium text-violet-600 underline underline-offset-2 transition-colors hover:text-violet-800 dark:text-violet-400 dark:hover:text-violet-300"
       >
         {children}
       </a>

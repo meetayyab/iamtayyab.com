@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { formatPostCount } from '@/lib/blog';
 import { getPosts, urlFor } from '@/lib/sanity';
 import Container from '@/components/layout/container';
 import Tag from '@/components/data-display/tag';
@@ -28,6 +29,9 @@ export default async function BlogPreviewSection() {
           <Typography variant="subtitle" className="max-w-lg">
             A few things I&apos;ve been thinking about.
           </Typography>
+          <p className="text-sm text-gray-500 dark:text-gray-400">
+            {formatPostCount(posts.length)}
+          </p>
         </div>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
@@ -72,7 +76,7 @@ export default async function BlogPreviewSection() {
             href="/blog"
             className="rounded-full border border-gray-200 px-5 py-2 text-sm text-gray-600 hover:bg-gray-50 transition"
           >
-            View all posts →
+            View all {posts.length} posts →
           </Link>
         </div>
       </Container>
