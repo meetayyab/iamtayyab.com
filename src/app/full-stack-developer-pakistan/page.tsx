@@ -46,7 +46,7 @@ export const metadata: Metadata = {
         url: `${SITE_URL}/images/open-graph-tayyab.png`,
         width: 1200,
         height: 630,
-        alt: 'Muhammad Tayyab — Full Stack Developer Pakistan',
+        alt: `Muhammad Tayyab — ${LANDING_PAGE_TITLE}`,
       },
     ],
   },
@@ -198,7 +198,7 @@ export default function FullStackDeveloperPakistanPage() {
           <div className="flex flex-col items-center gap-6 text-center md:max-w-2xl md:items-start md:text-left">
             <Tag label="Hire" />
             <Typography variant="h1" className="max-w-4xl">
-              Full Stack Developer Pakistan
+              {LANDING_PAGE_TITLE}
             </Typography>
             <Typography variant="subtitle" className="max-w-2xl">
               For US and UK founders hiring offshore — one senior engineer in
@@ -471,7 +471,7 @@ export default function FullStackDeveloperPakistanPage() {
       <Container className="bg-gray-50">
         <div className="mx-auto max-w-3xl">
           <ContactCta
-            title="Ready to hire a full stack developer in Pakistan?"
+            title="Ready to hire a full stack developer in Lahore, Pakistan?"
             description="Share your product, timeline, and stack — I usually reply within a day. No pitch deck required."
           />
           <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">

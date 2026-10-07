@@ -59,6 +59,11 @@ export const HIRE_FAQS: FaqItem[] = [
       'Muhammad Tayyab is a Full Stack and Mobile Developer based in Lahore, Pakistan. He specializes in Angular, React.js, React Native, SwiftUI, and Node.js, and builds web and mobile products end to end.',
   },
   {
+    question: 'Where is Muhammad Tayyab based?',
+    answer:
+      'Lahore, Pakistan (UTC+5). Available for remote freelance and contract work with US and UK teams.',
+  },
+  {
     question: 'What kind of projects can I hire Muhammad Tayyab for?',
     answer:
       'You can hire him for full stack web apps, React Native and SwiftUI mobile apps, Node.js backends, billing and subscription systems, dashboards, and database-backed products using PostgreSQL, MySQL, or MongoDB.',
@@ -240,9 +245,9 @@ export const LANDING_PAGE_URL = `${SITE_URL}${LANDING_PAGE_PATH}`;
 export const LANDING_PAGE_ID = `${LANDING_PAGE_URL}/#webpage`;
 export const LANDING_SERVICE_ID = `${LANDING_PAGE_URL}/#service`;
 
-export const LANDING_PAGE_TITLE = 'Full Stack Developer Pakistan';
+export const LANDING_PAGE_TITLE = 'Full Stack Developer in Lahore, Pakistan';
 export const LANDING_PAGE_DESCRIPTION =
-  'Hire a full stack developer in Pakistan for your US or UK startup. Next.js, React, Node.js, and mobile — async-first delivery from Lahore with proven billing and product outcomes.';
+  'Hire a full stack developer in Lahore, Pakistan for your US or UK startup. Next.js, React, Node.js, and mobile — async-first delivery with proven billing and product outcomes.';
 
 /** Linked Person + ProfessionalService + WebPage for the hire landing page. */
 export function buildLandingPageGraph() {
