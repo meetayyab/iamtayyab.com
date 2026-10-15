@@ -17,6 +17,7 @@ const TestimonialDetails = ({
         alt={`${personName} avatar`}
         width={75}
         height={75}
+        unoptimized
         className="rounded-full"
       />
       <Typography>&quot;{testimonial}&quot;</Typography>
