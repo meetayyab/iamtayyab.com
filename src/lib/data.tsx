@@ -29,16 +29,19 @@ import ProjectBlackSeal from '../../public/images/project-blackseal.png';
 import ProjectVisaBookings from '../../public/images/project-visabookings.png';
 import ProjectWorkConnect from '../../public/images/project-workconnect.png';
 
-import AvatarOsama from '../../public/images/avatar-osama-yawar.png';
-import AvatarVincent from '../../public/images/avatar-vincent-ochs.jpeg';
-import AvatarGabriel from '../../public/images/avatar-gabriel-tannous.jpeg';
-
 import {
   ExperienceDetails,
   ProjectDetails,
   TechDetails,
   TestimonialDetails,
 } from '@/lib/types';
+
+/** Served from /public; kept out of image search via robots + X-Robots-Tag. */
+const TESTIMONIAL_AVATAR = {
+  osama: '/images/testimonials/avatar-osama-yawar.png',
+  vincent: '/images/testimonials/avatar-vincent-ochs.jpeg',
+  gabriel: '/images/testimonials/avatar-gabriel-tannous.jpeg',
+} as const;
 
 export const EXTERNAL_LINKS = {
   GITHUB: 'https://github.com/meetayyab',
@@ -292,21 +295,21 @@ export const PROJECTS: ProjectDetails[] = [
 export const TESTIMONIALS: TestimonialDetails[] = [
   {
     personName: 'Osama Yawar',
-    personAvatar: AvatarOsama,
+    personAvatar: TESTIMONIAL_AVATAR.osama,
     title: 'Head of Engineering - Efani',
     testimonial:
       'An ambitious team player to work with. He has been a great help in solving complex problems. His dedication, expertise and habit of taking ownership added value to our company. Highly recommended !!',
   },
   {
     personName: 'Vincent Ochs',
-    personAvatar: AvatarVincent,
+    personAvatar: TESTIMONIAL_AVATAR.vincent,
     title: 'Founder - Kairos',
     testimonial:
       `This guy knows exactly what he is been doing and also contributes to the task by providing his own solutions and thoughts. He works independently and made sure I can follow on the way along. I can suggest anyone to work with him`,
   },
   {
     personName: 'Gabriel Tannous',
-    personAvatar: AvatarGabriel,
+    personAvatar: TESTIMONIAL_AVATAR.gabriel,
     title: 'Lead Software Engineer - Lumachain',
     testimonial:
       'Excellent collaboration throughout the entire project. Tayyab consistently delivered high-quality work on time and maintained clear communication. His professionalism and reliability make him someone I would definitely work with again on future projects.',
