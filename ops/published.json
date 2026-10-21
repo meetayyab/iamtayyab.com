@@ -1,0 +1,719 @@
+{
+  "updatedAt": "2026-10-21",
+  "posts": [
+    {
+      "slug": "make-your-saas-api-agent-ready",
+      "title": "AI Agents Are Starting to Pay for Software Themselves. Is Your SaaS or API Ready?",
+      "url": "https://www.iamtayyab.com/blog/make-your-saas-api-agent-ready",
+      "publishedAt": "2026-10-21",
+      "tags": [
+        "AI agents",
+        "API design",
+        "SaaS",
+        "MCP",
+        "agentic payments",
+        "x402",
+        "developer experience"
+      ],
+      "cluster": "general",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null
+    },
+    {
+      "slug": "ai-agent-hacking-small-saas-hardening-checklist",
+      "title": "AI Agents Hacked 100+ Sites for About $50 Each. A Hardening Checklist for Small SaaS and App Backends",
+      "url": "https://www.iamtayyab.com/blog/ai-agent-hacking-small-saas-hardening-checklist",
+      "publishedAt": "2026-10-20",
+      "tags": [
+        "cybersecurity",
+        "AI agents",
+        "SaaS security",
+        "hardening checklist",
+        "OWASP",
+        "indie developers",
+        "app backends"
+      ],
+      "cluster": "general",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null
+    },
+    {
+      "slug": "gemini-4-argon-android-studio-guide",
+      "title": "Gemini 4 Argon in Android Studio: What Changes for Android and Cross-Platform Devs",
+      "url": "https://www.iamtayyab.com/blog/gemini-4-argon-android-studio-guide",
+      "publishedAt": "2026-10-19",
+      "tags": [
+        "Gemini 4 Argon",
+        "Android Studio",
+        "AI coding agents",
+        "Gradle",
+        "Kotlin",
+        "Flutter",
+        "React Native",
+        "Kotlin Multiplatform"
+      ],
+      "cluster": "general",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null
+    },
+    {
+      "slug": "figma-code-layers-specs-agent-handoff",
+      "title": "Figma Code Layers and Specs: Handing Your Coding Agent a Spec Instead of a Screenshot",
+      "url": "https://www.iamtayyab.com/blog/figma-code-layers-specs-agent-handoff",
+      "publishedAt": "2026-10-16",
+      "tags": [
+        "Figma",
+        "AI coding agents",
+        "MCP",
+        "design handoff",
+        "Next.js",
+        "SwiftUI",
+        "indie developers"
+      ],
+      "cluster": "general",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null
+    },
+    {
+      "slug": "developer-id-certificate-expiry-2027-mac-apps",
+      "title": "Your Mac App's Developer ID Certificate May Stop Working Feb 1, 2027: A 15-Minute Fix",
+      "url": "https://www.iamtayyab.com/blog/developer-id-certificate-expiry-2027-mac-apps",
+      "publishedAt": "2026-10-15",
+      "tags": [
+        "macOS",
+        "Developer ID",
+        "code signing",
+        "notarization",
+        "Mac apps",
+        "CI/CD",
+        "indie developers"
+      ],
+      "cluster": "general",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null
+    },
+    {
+      "slug": "saas-cancellation-wave-build-vs-buy",
+      "title": "The SaaS Cancellation Wave: When Building Your Own Tool Beats the Subscription, and When It Doesn't",
+      "url": "https://www.iamtayyab.com/blog/saas-cancellation-wave-build-vs-buy",
+      "publishedAt": "2026-10-14",
+      "tags": [
+        "build vs buy",
+        "SaaS",
+        "internal tools",
+        "vibe coding",
+        "indie hackers",
+        "startup costs",
+        "AI coding agents"
+      ],
+      "cluster": "general",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null
+    },
+    {
+      "slug": "pricing-page-aeo-indie-saas-checklist",
+      "title": "Make Your Pricing Page Easy for AI Assistants to Quote",
+      "url": "https://www.iamtayyab.com/blog/pricing-page-aeo-indie-saas-checklist",
+      "publishedAt": "2026-10-14",
+      "tags": [
+        "AEO",
+        "pricing page",
+        "SaaS",
+        "structured data",
+        "ChatGPT",
+        "Perplexity",
+        "indie hackers"
+      ],
+      "cluster": "general",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null
+    },
+    {
+      "slug": "app-store-algorithm-update-october-2026-aso-triage",
+      "title": "Apple Quietly Shook App Store Rankings: Your ASO Fixes for This Week",
+      "url": "https://www.iamtayyab.com/blog/app-store-algorithm-update-october-2026-aso-triage",
+      "publishedAt": "2026-10-13",
+      "tags": [
+        "App Store Optimization",
+        "ASO",
+        "App Store search",
+        "keyword rankings",
+        "App Analytics",
+        "indie apps",
+        "iOS"
+      ],
+      "cluster": "general",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null
+    },
+    {
+      "slug": "app-store-campaign-links-indie-attribution",
+      "title": "App Store Campaign Links: The Indie Attribution Checklist",
+      "url": "https://www.iamtayyab.com/blog/app-store-campaign-links-indie-attribution",
+      "publishedAt": "2026-10-09",
+      "tags": [
+        "App Store Connect",
+        "app attribution",
+        "campaign links",
+        "App Analytics",
+        "indie apps",
+        "iOS",
+        "app marketing"
+      ],
+      "cluster": "general",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null
+    },
+    {
+      "slug": "building-in-public-ai-app-clones",
+      "title": "Building in Public When AI Can Clone Your App in Two Prompts",
+      "url": "https://www.iamtayyab.com/blog/building-in-public-ai-app-clones",
+      "publishedAt": "2026-10-08",
+      "tags": [
+        "building in public",
+        "indie apps",
+        "vibe coding",
+        "AI app builders",
+        "iOS",
+        "TestFlight",
+        "startup strategy"
+      ],
+      "cluster": "general",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null
+    },
+    {
+      "slug": "app-store-creative-assets-product-page-headers",
+      "title": "Apple's New App Store Headers and Search Assets: What Indie Apps Should Make First",
+      "url": "https://www.iamtayyab.com/blog/app-store-creative-assets-product-page-headers",
+      "publishedAt": "2026-10-07",
+      "tags": [
+        "App Store",
+        "App Store Connect",
+        "indie apps",
+        "creative assets",
+        "ASO",
+        "iOS 27",
+        "DripScore"
+      ],
+      "cluster": "general",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null
+    },
+    {
+      "slug": "google-play-contact-picker-location-button-deadline",
+      "title": "Google Play's January 27 Deadline: Contact Picker and Location Button Checklist for Indie Apps",
+      "url": "https://www.iamtayyab.com/blog/google-play-contact-picker-location-button-deadline",
+      "publishedAt": "2026-10-07",
+      "tags": [
+        "Google Play",
+        "Android",
+        "indie apps",
+        "privacy",
+        "Contact Picker",
+        "location button",
+        "Play Console"
+      ],
+      "cluster": "general",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null
+    },
+    {
+      "slug": "apple-eu-unified-app-store-terms-indie-guide",
+      "title": "Apple's New EU App Store Terms Are Live: What Indie Devs Should Decide Before the 12-Month Lock",
+      "url": "https://www.iamtayyab.com/blog/apple-eu-unified-app-store-terms-indie-guide",
+      "publishedAt": "2026-10-05",
+      "tags": [
+        "App Store",
+        "indie apps",
+        "EU",
+        "Digital Markets Act",
+        "in-app purchase",
+        "subscriptions",
+        "pricing"
+      ],
+      "cluster": "general",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null
+    },
+    {
+      "slug": "app-store-installs-from-threads-comments",
+      "title": "3,000 Installs From a Free Comment: Zero-Budget App Store Channels That Actually Work",
+      "url": "https://www.iamtayyab.com/blog/app-store-installs-from-threads-comments",
+      "publishedAt": "2026-10-02",
+      "tags": [
+        "App Store",
+        "indie apps",
+        "Threads",
+        "ASO",
+        "user acquisition",
+        "organic growth"
+      ],
+      "cluster": "general",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null
+    },
+    {
+      "slug": "iphone-duo-app-ready-checklist",
+      "title": "iPhone Duo Is Almost Here—What Indie Apps Should Fix Before October 23",
+      "url": "https://www.iamtayyab.com/blog/iphone-duo-app-ready-checklist",
+      "publishedAt": "2026-10-01",
+      "tags": [
+        "iPhone Duo",
+        "iOS 27",
+        "indie apps",
+        "mobile development",
+        "Xcode",
+        "App Store"
+      ],
+      "cluster": "general",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null
+    },
+    {
+      "slug": "openai-dots-always-on-agents-builders-guide",
+      "title": "OpenAI’s Dots: What Builders Should Enable, Gate, and Monitor With Always-On Agents",
+      "url": "https://www.iamtayyab.com/blog/openai-dots-always-on-agents-builders-guide",
+      "publishedAt": "2026-09-30",
+      "tags": [
+        "ai-agents",
+        "openai",
+        "chatgpt",
+        "security",
+        "builders",
+        "productivity"
+      ],
+      "cluster": "general",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null
+    },
+    {
+      "slug": "ai-app-discovery-ask-play-chatgpt-aso",
+      "title": "When ChatGPT and Ask Play Pick the App—Not the Store Search Bar",
+      "url": "https://www.iamtayyab.com/blog/ai-app-discovery-ask-play-chatgpt-aso",
+      "publishedAt": "2026-09-29",
+      "tags": [
+        "aso",
+        "ai",
+        "mobile",
+        "app-discovery",
+        "chatgpt",
+        "google-play"
+      ],
+      "cluster": "general",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null
+    },
+    {
+      "slug": "mobile-remote-coding-agent-apps-security",
+      "title": "Coding Agents in Your Pocket: The New Wave of Remote Control Apps",
+      "url": "https://www.iamtayyab.com/blog/mobile-remote-coding-agent-apps-security",
+      "publishedAt": "2026-09-28",
+      "tags": [
+        "security",
+        "ai-agents",
+        "mobile",
+        "devops"
+      ],
+      "cluster": "general",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null
+    },
+    {
+      "slug": "muse-ai-agent-hijack-privileged-assistant-checklist",
+      "title": "Muse’s agent hijack: what privileged AI assistants actually put at risk",
+      "url": "https://www.iamtayyab.com/blog/muse-ai-agent-hijack-privileged-assistant-checklist",
+      "publishedAt": "2026-09-28",
+      "tags": [
+        "security",
+        "ai-agents",
+        "privacy",
+        "macos"
+      ],
+      "cluster": "general",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null
+    },
+    {
+      "slug": "plugin4shell-ai-coding-agent-security",
+      "title": "Plugin4Shell: What the AI Coding-Agent RCE Means for Your Setup",
+      "url": "https://www.iamtayyab.com/blog/plugin4shell-ai-coding-agent-security",
+      "publishedAt": "2026-09-24",
+      "tags": [
+        "security",
+        "ai-agents",
+        "supply-chain",
+        "devops"
+      ],
+      "cluster": "general",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null
+    },
+    {
+      "slug": "async-collaboration-full-stack-developer-pakistan",
+      "title": "How US/UK Startups Run Async With a Full Stack Developer in Pakistan",
+      "url": "https://www.iamtayyab.com/blog/async-collaboration-full-stack-developer-pakistan",
+      "publishedAt": "2026-09-23",
+      "tags": [
+        "full-stack",
+        "async",
+        "remote-work",
+        "hiring",
+        "pakistan",
+        "startups",
+        "collaboration"
+      ],
+      "cluster": "hire",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null
+    },
+    {
+      "slug": "support-dashboard-tickets-full-stack-hire",
+      "title": "Why Your Support Dashboard Is 90% of the Tickets (And What a Full Stack Hire Fixes)",
+      "url": "https://www.iamtayyab.com/blog/support-dashboard-tickets-full-stack-hire",
+      "publishedAt": "2026-09-22",
+      "tags": [
+        "full-stack",
+        "saas-support",
+        "hiring",
+        "product-ops",
+        "pakistan",
+        "startups"
+      ],
+      "cluster": "hire",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null
+    },
+    {
+      "slug": "pakistan-vs-india-vs-eastern-europe-full-stack",
+      "title": "Pakistan vs India vs Eastern Europe for Full-Stack Hire (2026)",
+      "url": "https://www.iamtayyab.com/blog/pakistan-vs-india-vs-eastern-europe-full-stack",
+      "publishedAt": "2026-09-21",
+      "tags": [
+        "Full Stack",
+        "Hiring",
+        "Pakistan",
+        "India",
+        "Eastern Europe"
+      ],
+      "cluster": "hire",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null
+    },
+    {
+      "slug": "hire-pakistan-full-stack-contractor-retainer-dedicated",
+      "title": "Hire a Full Stack Developer in Pakistan: Contractor, Retainer, or Dedicated?",
+      "url": "https://www.iamtayyab.com/blog/hire-pakistan-full-stack-contractor-retainer-dedicated",
+      "publishedAt": "2026-09-18",
+      "tags": [
+        "Full Stack",
+        "Hiring",
+        "Pakistan",
+        "Contractor",
+        "Retainer"
+      ],
+      "cluster": "hire",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null
+    },
+    {
+      "slug": "hire-react-full-stack-developer-pakistan",
+      "title": "Hire a React Full Stack Developer in Pakistan (What “React-Ready” Means)",
+      "url": "https://www.iamtayyab.com/blog/hire-react-full-stack-developer-pakistan",
+      "publishedAt": "2026-09-17",
+      "tags": [
+        "React",
+        "Full Stack",
+        "Hiring",
+        "Pakistan",
+        "TypeScript"
+      ],
+      "cluster": "hire",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null
+    },
+    {
+      "slug": "red-flags-hiring-full-stack-developer-pakistan",
+      "title": "Red Flags When Hiring a Full Stack Developer in Pakistan",
+      "url": "https://www.iamtayyab.com/blog/red-flags-hiring-full-stack-developer-pakistan",
+      "publishedAt": "2026-09-16",
+      "tags": [
+        "Full Stack",
+        "Hiring",
+        "Pakistan",
+        "Vetting",
+        "Indie Development"
+      ],
+      "cluster": "hire",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null
+    },
+    {
+      "slug": "nextjs-full-stack-developer-pakistan",
+      "title": "Next.js Full Stack Developer in Pakistan (What You Actually Get)",
+      "url": "https://www.iamtayyab.com/blog/nextjs-full-stack-developer-pakistan",
+      "publishedAt": "2026-09-15",
+      "tags": [
+        "Next.js",
+        "Full Stack",
+        "Hiring",
+        "Pakistan",
+        "Indie Development"
+      ],
+      "cluster": "hire",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null
+    },
+    {
+      "slug": "what-us-startups-pay-full-stack-pakistan",
+      "title": "What US Startups Actually Pay for a Full Stack Dev in Pakistan",
+      "url": "https://www.iamtayyab.com/blog/what-us-startups-pay-full-stack-pakistan",
+      "publishedAt": "2026-09-14",
+      "tags": [
+        "Full Stack",
+        "Hiring",
+        "Pakistan",
+        "Rates",
+        "Indie Development"
+      ],
+      "cluster": "hire",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null
+    },
+    {
+      "slug": "hire-full-stack-developer-pakistan-2026",
+      "title": "Hire a Full Stack Developer in Pakistan (2026 Buyer’s Guide)",
+      "url": "https://www.iamtayyab.com/blog/hire-full-stack-developer-pakistan-2026",
+      "publishedAt": "2026-09-11",
+      "tags": [
+        "Full Stack",
+        "Hiring",
+        "Pakistan",
+        "Indie Development"
+      ],
+      "cluster": "hire",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null
+    },
+    {
+      "slug": "shopify-bought-tailwind-what-changes",
+      "title": "Shopify Bought Tailwind. Now What for Your Next.js Stack?",
+      "url": "https://www.iamtayyab.com/blog/shopify-bought-tailwind-what-changes",
+      "publishedAt": "2026-09-10",
+      "tags": [
+        "Next.js",
+        "Tailwind",
+        "Web Development",
+        "Indie Development"
+      ],
+      "cluster": "general",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null
+    },
+    {
+      "slug": "android-developer-verification-sept-30",
+      "title": "Sept 30 Will Block Unverified Installs — And You’re Probably Late",
+      "url": "https://www.iamtayyab.com/blog/android-developer-verification-sept-30",
+      "publishedAt": "2026-09-09",
+      "tags": [
+        "Android",
+        "Google Play",
+        "Mobile Development",
+        "Indie Development"
+      ],
+      "cluster": "general",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null
+    },
+    {
+      "slug": "sell-the-year-bill-the-month-storekit",
+      "title": "Sell the Year, Bill the Month: Apple’s StoreKit Commitment Plans",
+      "url": "https://www.iamtayyab.com/blog/sell-the-year-bill-the-month-storekit",
+      "publishedAt": "2026-09-08",
+      "tags": [
+        "iOS",
+        "App Store",
+        "StoreKit",
+        "Mobile Development",
+        "Indie Development"
+      ],
+      "cluster": "general",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null
+    },
+    {
+      "slug": "google-play-12-tester-rule-indie",
+      "title": "Google Play's 12-Tester Gate (and Why Your First Android Ship Stalls)",
+      "url": "https://www.iamtayyab.com/blog/google-play-12-tester-rule-indie",
+      "publishedAt": "2026-09-07",
+      "tags": [
+        "Android",
+        "Google Play",
+        "Mobile Development",
+        "Indie Development"
+      ],
+      "cluster": "general",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null
+    },
+    {
+      "slug": "frontend-after-ai-what-still-matters",
+      "title": "Frontend After AI: What Still Matters When Agents Write the UI",
+      "url": "https://www.iamtayyab.com/blog/frontend-after-ai-what-still-matters",
+      "publishedAt": "2026-09-04",
+      "tags": [
+        "Frontend",
+        "AI",
+        "Next.js",
+        "Accessibility",
+        "Web Performance",
+        "Indie Development"
+      ],
+      "cluster": "general",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null
+    },
+    {
+      "slug": "nextjs-16-3-turbopack-chunking",
+      "title": "Next.js 16.3 Turbopack Chunking: Instant Navigations Are Useless If the Wrong Chunks Ship",
+      "url": "https://www.iamtayyab.com/blog/nextjs-16-3-turbopack-chunking",
+      "publishedAt": "2026-09-04",
+      "tags": [
+        "Next.js",
+        "Turbopack",
+        "Web Performance",
+        "App Router",
+        "Indie Development"
+      ],
+      "cluster": "general",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null
+    },
+    {
+      "slug": "app-store-review-process-what-nobody-tells-you",
+      "title": "The App Store Review Process: What Nobody Tells You",
+      "url": "https://www.iamtayyab.com/blog/app-store-review-process-what-nobody-tells-you",
+      "publishedAt": "2026-04-27",
+      "tags": [
+        "iOS Development",
+        "App Store",
+        "Mobile Development",
+        "App Launch",
+        "Apple Review",
+        "App Submission",
+        "Mobile Apps"
+      ],
+      "cluster": "general",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null
+    },
+    {
+      "slug": "ai-first-development-build-features-faster",
+      "title": "AI-First Development: How I Use AI Agents to Build Features 10x Faster",
+      "url": "https://www.iamtayyab.com/blog/ai-first-development-build-features-faster",
+      "publishedAt": "2026-04-15",
+      "tags": [
+        "AI",
+        "Developer Tools",
+        "React",
+        "Next.js",
+        "Full Stack",
+        "Productivity"
+      ],
+      "cluster": "general",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null
+    },
+    {
+      "slug": "custom-billing-engine-stripe-subscriptions",
+      "title": "Why I Stopped Using Stripe Subscriptions and Built My Own Billing Engine",
+      "url": "https://www.iamtayyab.com/blog/custom-billing-engine-stripe-subscriptions",
+      "publishedAt": "2026-04-06",
+      "tags": [
+        "Node.js",
+        "PostgreSQL",
+        "Stripe",
+        "Backend",
+        "SaaS",
+        "Billing"
+      ],
+      "cluster": "general",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null
+    },
+    {
+      "slug": "fixing-lighthouse-score-portfolio-seo-accessibility",
+      "title": "From 85 to 100: How I Fixed My Portfolio's Lighthouse Score (And What I Learned)",
+      "url": "https://www.iamtayyab.com/blog/fixing-lighthouse-score-portfolio-seo-accessibility",
+      "publishedAt": "2026-03-31",
+      "tags": [
+        "Next.js",
+        "SEO",
+        "Accessibility",
+        "Lighthouse",
+        "Web Performance",
+        "Portfolio"
+      ],
+      "cluster": "general",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null
+    },
+    {
+      "slug": "building-a-blog-engine-with-nextjs-16-app-router",
+      "title": "Building a Blog Engine with Next.js 16 App Router — What Nobody Tells You",
+      "url": "https://www.iamtayyab.com/blog/building-a-blog-engine-with-nextjs-16-app-router",
+      "publishedAt": "2025-03-28",
+      "tags": [
+        "Next.js",
+        "Sanity",
+        "CMS",
+        "Vercel",
+        "TypeScript",
+        "Tutorial"
+      ],
+      "cluster": "general",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null
+    }
+  ]
+}

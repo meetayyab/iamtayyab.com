@@ -1,0 +1,21 @@
+{
+  "name": "iamtayyab-blog-ops",
+  "private": true,
+  "type": "module",
+  "description": "Scripts the blog routines run: publish to Sanity, covers, screenshots, Search Console, IndexNow.",
+  "scripts": {
+    "publish": "node scripts/sanity-publish.mjs",
+    "cover": "node scripts/unsplash-cover.mjs",
+    "verify": "node scripts/verify-live.mjs",
+    "gsc": "node scripts/gsc-report.mjs",
+    "request-indexing": "node scripts/gsc-request-indexing.mjs",
+    "indexnow": "node scripts/indexnow.mjs"
+  },
+  "dependencies": {
+    "@sanity/client": "^7.3.0",
+    "google-auth-library": "^10.1.0",
+    "marked": "^15.0.12",
+    "playwright": "^1.52.0",
+    "yaml": "^2.8.0"
+  }
+}

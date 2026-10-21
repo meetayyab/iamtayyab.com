@@ -1,0 +1,29 @@
+{
+  "note": "Canonical tag list. Title case, spaces not hyphens. Map legacy variants with `aliases`.",
+  "tags": [
+    { "tag": "AI agents", "aliases": ["ai-agents", "AI coding agents", "ai", "AI"] },
+    { "tag": "App Store", "aliases": ["App Store Connect", "iOS", "iOS Development", "Apple Review", "App Submission"] },
+    { "tag": "ASO", "aliases": ["aso", "App Store Optimization", "App Store search", "app-discovery"] },
+    { "tag": "Google Play", "aliases": ["google-play", "Android", "Play Console"] },
+    { "tag": "Indie apps", "aliases": ["indie apps", "indie developers", "indie hackers", "Indie Development", "Mobile Apps"] },
+    { "tag": "SaaS", "aliases": ["SaaS security", "saas-support", "Billing", "subscriptions"] },
+    { "tag": "Pricing", "aliases": ["pricing", "pricing page", "in-app purchase", "StoreKit"] },
+    { "tag": "Security", "aliases": ["security", "cybersecurity", "supply-chain", "hardening checklist", "OWASP", "privacy"] },
+    { "tag": "Next.js", "aliases": ["App Router", "Turbopack", "Tailwind"] },
+    { "tag": "React Native", "aliases": ["mobile", "Mobile Development", "mobile development", "Flutter"] },
+    { "tag": "Node.js", "aliases": ["Backend", "Express", "PostgreSQL"] },
+    { "tag": "Web performance", "aliases": ["Web Performance", "Lighthouse", "Accessibility"] },
+    { "tag": "Hiring", "aliases": ["hiring", "Vetting", "Contractor", "Retainer", "Rates"] },
+    { "tag": "Full stack", "aliases": ["Full Stack", "full-stack"] },
+    { "tag": "Pakistan", "aliases": ["pakistan"] },
+    { "tag": "Remote work", "aliases": ["remote-work", "async", "collaboration", "startups"] },
+    { "tag": "AEO", "aliases": ["structured data", "ChatGPT", "chatgpt", "Perplexity"] },
+    { "tag": "MCP", "aliases": ["API design", "developer experience"] },
+    { "tag": "macOS", "aliases": ["macos", "Developer ID", "code signing", "notarization", "Mac apps"] },
+    { "tag": "DevOps", "aliases": ["devops", "CI/CD", "Docker"] },
+    { "tag": "Building in public", "aliases": ["building in public", "vibe coding", "startup strategy"] },
+    { "tag": "Design handoff", "aliases": ["Figma"] },
+    { "tag": "Sanity", "aliases": ["CMS"] },
+    { "tag": "SEO", "aliases": ["Portfolio"] }
+  ]
+}
