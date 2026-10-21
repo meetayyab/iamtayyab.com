@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
-import { getPosts } from '@/lib/sanity';
+import { getAllTags, getPosts } from '@/lib/sanity';
+import { tagToSlug } from '@/lib/blog';
 
 // Force dynamic so new Sanity posts appear immediately. ISR (revalidate=60) was
 // leaving a multi-hour Vercel CDN HIT that omitted freshly published slugs.
@@ -42,7 +43,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         };
       });
 
-    return [...staticUrls, ...blogUrls];
+    const tags = await getAllTags().catch(() => []);
+    const tagUrls: MetadataRoute.Sitemap = tags.map(({ tag }) => ({
+      url: `https://www.iamtayyab.com/blog/tag/${tagToSlug(tag)}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.5,
+    }));
+
+    return [...staticUrls, ...blogUrls, ...tagUrls];
   } catch (err) {
     console.error('sitemap generation failed', err);
     // Never 500 the sitemap solely because Sanity failed — static URLs still discoverable
