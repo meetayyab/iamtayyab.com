@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-21",
+  "updatedAt": "2026-11-02",
   "posts": [
     {
       "slug": "make-your-saas-api-agent-ready",
@@ -16,9 +16,16 @@
         "developer experience"
       ],
       "cluster": "general",
-      "indexed": null,
-      "lastInspected": null,
-      "lastRefreshed": null
+      "indexed": true,
+      "lastInspected": "2026-11-02",
+      "lastRefreshed": null,
+      "coverageState": "Submitted and indexed",
+      "performance": {
+        "days": 28,
+        "clicks": 0,
+        "impressions": 312,
+        "position": 7.1
+      }
     },
     {
       "slug": "ai-agent-hacking-small-saas-hardening-checklist",
@@ -35,9 +42,16 @@
         "app backends"
       ],
       "cluster": "general",
-      "indexed": null,
-      "lastInspected": null,
-      "lastRefreshed": null
+      "indexed": true,
+      "lastInspected": "2026-11-02",
+      "lastRefreshed": null,
+      "coverageState": "Submitted and indexed",
+      "performance": {
+        "days": 28,
+        "clicks": 2,
+        "impressions": 250,
+        "position": 9.9
+      }
     },
     {
       "slug": "gemini-4-argon-android-studio-guide",
@@ -55,9 +69,16 @@
         "Kotlin Multiplatform"
       ],
       "cluster": "general",
-      "indexed": null,
-      "lastInspected": null,
-      "lastRefreshed": null
+      "indexed": true,
+      "lastInspected": "2026-11-02",
+      "lastRefreshed": null,
+      "coverageState": "Submitted and indexed",
+      "performance": {
+        "days": 28,
+        "clicks": 6,
+        "impressions": 526,
+        "position": 7.2
+      }
     },
     {
       "slug": "figma-code-layers-specs-agent-handoff",
@@ -74,9 +95,16 @@
         "indie developers"
       ],
       "cluster": "general",
-      "indexed": null,
-      "lastInspected": null,
-      "lastRefreshed": null
+      "indexed": true,
+      "lastInspected": "2026-11-02",
+      "lastRefreshed": null,
+      "coverageState": "Submitted and indexed",
+      "performance": {
+        "days": 28,
+        "clicks": 10,
+        "impressions": 817,
+        "position": 8.5
+      }
     },
     {
       "slug": "developer-id-certificate-expiry-2027-mac-apps",
@@ -93,9 +121,16 @@
         "indie developers"
       ],
       "cluster": "general",
-      "indexed": null,
-      "lastInspected": null,
-      "lastRefreshed": null
+      "indexed": true,
+      "lastInspected": "2026-11-02",
+      "lastRefreshed": null,
+      "coverageState": "Submitted and indexed",
+      "performance": {
+        "days": 28,
+        "clicks": 8,
+        "impressions": 470,
+        "position": 7.4
+      }
     },
     {
       "slug": "saas-cancellation-wave-build-vs-buy",
@@ -112,9 +147,16 @@
         "AI coding agents"
       ],
       "cluster": "general",
-      "indexed": null,
-      "lastInspected": null,
-      "lastRefreshed": null
+      "indexed": true,
+      "lastInspected": "2026-11-02",
+      "lastRefreshed": null,
+      "coverageState": "Submitted and indexed",
+      "performance": {
+        "days": 28,
+        "clicks": 0,
+        "impressions": 18,
+        "position": 5.9
+      }
     },
     {
       "slug": "pricing-page-aeo-indie-saas-checklist",
@@ -131,9 +173,16 @@
         "indie hackers"
       ],
       "cluster": "general",
-      "indexed": null,
-      "lastInspected": null,
-      "lastRefreshed": null
+      "indexed": true,
+      "lastInspected": "2026-11-02",
+      "lastRefreshed": null,
+      "coverageState": "Submitted and indexed",
+      "performance": {
+        "days": 28,
+        "clicks": 0,
+        "impressions": 36,
+        "position": 8.1
+      }
     },
     {
       "slug": "app-store-algorithm-update-october-2026-aso-triage",
@@ -150,9 +199,16 @@
         "iOS"
       ],
       "cluster": "general",
-      "indexed": null,
-      "lastInspected": null,
-      "lastRefreshed": null
+      "indexed": true,
+      "lastInspected": "2026-11-02",
+      "lastRefreshed": null,
+      "coverageState": "Submitted and indexed",
+      "performance": {
+        "days": 28,
+        "clicks": 10,
+        "impressions": 226,
+        "position": 7.5
+      }
     },
     {
       "slug": "app-store-campaign-links-indie-attribution",
@@ -169,9 +225,16 @@
         "app marketing"
       ],
       "cluster": "general",
-      "indexed": null,
-      "lastInspected": null,
-      "lastRefreshed": null
+      "indexed": true,
+      "lastInspected": "2026-11-02",
+      "lastRefreshed": null,
+      "coverageState": "Submitted and indexed",
+      "performance": {
+        "days": 28,
+        "clicks": 3,
+        "impressions": 422,
+        "position": 6.3
+      }
     },
     {
       "slug": "building-in-public-ai-app-clones",
@@ -188,9 +251,16 @@
         "startup strategy"
       ],
       "cluster": "general",
-      "indexed": null,
-      "lastInspected": null,
-      "lastRefreshed": null
+      "indexed": true,
+      "lastInspected": "2026-11-02",
+      "lastRefreshed": null,
+      "coverageState": "Submitted and indexed",
+      "performance": {
+        "days": 28,
+        "clicks": 3,
+        "impressions": 88,
+        "position": 6.1
+      }
     },
     {
       "slug": "app-store-creative-assets-product-page-headers",
@@ -207,9 +277,16 @@
         "DripScore"
       ],
       "cluster": "general",
-      "indexed": null,
-      "lastInspected": null,
-      "lastRefreshed": null
+      "indexed": true,
+      "lastInspected": "2026-11-02",
+      "lastRefreshed": null,
+      "coverageState": "Submitted and indexed",
+      "performance": {
+        "days": 28,
+        "clicks": 16,
+        "impressions": 1008,
+        "position": 8.2
+      }
     },
     {
       "slug": "google-play-contact-picker-location-button-deadline",
@@ -226,9 +303,16 @@
         "Play Console"
       ],
       "cluster": "general",
-      "indexed": null,
-      "lastInspected": null,
-      "lastRefreshed": null
+      "indexed": true,
+      "lastInspected": "2026-11-02",
+      "lastRefreshed": null,
+      "coverageState": "Submitted and indexed",
+      "performance": {
+        "days": 28,
+        "clicks": 3,
+        "impressions": 389,
+        "position": 5.9
+      }
     },
     {
       "slug": "apple-eu-unified-app-store-terms-indie-guide",
@@ -245,9 +329,16 @@
         "pricing"
       ],
       "cluster": "general",
-      "indexed": null,
-      "lastInspected": null,
-      "lastRefreshed": null
+      "indexed": true,
+      "lastInspected": "2026-11-02",
+      "lastRefreshed": null,
+      "coverageState": "Submitted and indexed",
+      "performance": {
+        "days": 28,
+        "clicks": 3,
+        "impressions": 491,
+        "position": 7
+      }
     },
     {
       "slug": "app-store-installs-from-threads-comments",
@@ -263,9 +354,16 @@
         "organic growth"
       ],
       "cluster": "general",
-      "indexed": null,
-      "lastInspected": null,
-      "lastRefreshed": null
+      "indexed": true,
+      "lastInspected": "2026-11-02",
+      "lastRefreshed": null,
+      "coverageState": "Submitted and indexed",
+      "performance": {
+        "days": 28,
+        "clicks": 1,
+        "impressions": 19,
+        "position": 8.1
+      }
     },
     {
       "slug": "iphone-duo-app-ready-checklist",
@@ -281,9 +379,16 @@
         "App Store"
       ],
       "cluster": "general",
-      "indexed": null,
-      "lastInspected": null,
-      "lastRefreshed": null
+      "indexed": true,
+      "lastInspected": "2026-11-02",
+      "lastRefreshed": null,
+      "coverageState": "Submitted and indexed",
+      "performance": {
+        "days": 28,
+        "clicks": 0,
+        "impressions": 1,
+        "position": 3
+      }
     },
     {
       "slug": "openai-dots-always-on-agents-builders-guide",
@@ -299,9 +404,16 @@
         "productivity"
       ],
       "cluster": "general",
-      "indexed": null,
-      "lastInspected": null,
-      "lastRefreshed": null
+      "indexed": true,
+      "lastInspected": "2026-11-02",
+      "lastRefreshed": null,
+      "coverageState": "Submitted and indexed",
+      "performance": {
+        "days": 28,
+        "clicks": 0,
+        "impressions": 38,
+        "position": 8.8
+      }
     },
     {
       "slug": "ai-app-discovery-ask-play-chatgpt-aso",
@@ -317,9 +429,16 @@
         "google-play"
       ],
       "cluster": "general",
-      "indexed": null,
-      "lastInspected": null,
-      "lastRefreshed": null
+      "indexed": true,
+      "lastInspected": "2026-11-02",
+      "lastRefreshed": null,
+      "coverageState": "Submitted and indexed",
+      "performance": {
+        "days": 28,
+        "clicks": 1,
+        "impressions": 29,
+        "position": 11.9
+      }
     },
     {
       "slug": "mobile-remote-coding-agent-apps-security",
@@ -333,9 +452,16 @@
         "devops"
       ],
       "cluster": "general",
-      "indexed": null,
-      "lastInspected": null,
-      "lastRefreshed": null
+      "indexed": true,
+      "lastInspected": "2026-11-02",
+      "lastRefreshed": null,
+      "coverageState": "Submitted and indexed",
+      "performance": {
+        "days": 28,
+        "clicks": 2,
+        "impressions": 325,
+        "position": 8.9
+      }
     },
     {
       "slug": "muse-ai-agent-hijack-privileged-assistant-checklist",
@@ -349,9 +475,16 @@
         "macos"
       ],
       "cluster": "general",
-      "indexed": null,
-      "lastInspected": null,
-      "lastRefreshed": null
+      "indexed": true,
+      "lastInspected": "2026-11-02",
+      "lastRefreshed": null,
+      "coverageState": "Submitted and indexed",
+      "performance": {
+        "days": 28,
+        "clicks": 2,
+        "impressions": 87,
+        "position": 10.6
+      }
     },
     {
       "slug": "plugin4shell-ai-coding-agent-security",
@@ -365,9 +498,16 @@
         "devops"
       ],
       "cluster": "general",
-      "indexed": null,
-      "lastInspected": null,
-      "lastRefreshed": null
+      "indexed": true,
+      "lastInspected": "2026-11-02",
+      "lastRefreshed": null,
+      "coverageState": "Submitted and indexed",
+      "performance": {
+        "days": 28,
+        "clicks": 0,
+        "impressions": 7,
+        "position": 6.4
+      }
     },
     {
       "slug": "async-collaboration-full-stack-developer-pakistan",
@@ -384,9 +524,16 @@
         "collaboration"
       ],
       "cluster": "hire",
-      "indexed": null,
-      "lastInspected": null,
-      "lastRefreshed": null
+      "indexed": true,
+      "lastInspected": "2026-11-02",
+      "lastRefreshed": null,
+      "coverageState": "Submitted and indexed",
+      "performance": {
+        "days": 28,
+        "clicks": 0,
+        "impressions": 1,
+        "position": 1
+      }
     },
     {
       "slug": "support-dashboard-tickets-full-stack-hire",
@@ -402,9 +549,16 @@
         "startups"
       ],
       "cluster": "hire",
-      "indexed": null,
-      "lastInspected": null,
-      "lastRefreshed": null
+      "indexed": true,
+      "lastInspected": "2026-11-02",
+      "lastRefreshed": null,
+      "coverageState": "Submitted and indexed",
+      "performance": {
+        "days": 28,
+        "clicks": 0,
+        "impressions": 7,
+        "position": 7.9
+      }
     },
     {
       "slug": "pakistan-vs-india-vs-eastern-europe-full-stack",
@@ -419,9 +573,16 @@
         "Eastern Europe"
       ],
       "cluster": "hire",
-      "indexed": null,
-      "lastInspected": null,
-      "lastRefreshed": null
+      "indexed": true,
+      "lastInspected": "2026-11-02",
+      "lastRefreshed": null,
+      "coverageState": "Submitted and indexed",
+      "performance": {
+        "days": 28,
+        "clicks": 0,
+        "impressions": 7,
+        "position": 12.6
+      }
     },
     {
       "slug": "hire-pakistan-full-stack-contractor-retainer-dedicated",
@@ -436,9 +597,16 @@
         "Retainer"
       ],
       "cluster": "hire",
-      "indexed": null,
-      "lastInspected": null,
-      "lastRefreshed": null
+      "indexed": true,
+      "lastInspected": "2026-11-02",
+      "lastRefreshed": null,
+      "coverageState": "Submitted and indexed",
+      "performance": {
+        "days": 28,
+        "clicks": 1,
+        "impressions": 7,
+        "position": 8.6
+      }
     },
     {
       "slug": "hire-react-full-stack-developer-pakistan",
@@ -453,9 +621,16 @@
         "TypeScript"
       ],
       "cluster": "hire",
-      "indexed": null,
-      "lastInspected": null,
-      "lastRefreshed": null
+      "indexed": true,
+      "lastInspected": "2026-11-02",
+      "lastRefreshed": null,
+      "coverageState": "Submitted and indexed",
+      "performance": {
+        "days": 28,
+        "clicks": 0,
+        "impressions": 9,
+        "position": 7.8
+      }
     },
     {
       "slug": "red-flags-hiring-full-stack-developer-pakistan",
@@ -470,9 +645,16 @@
         "Indie Development"
       ],
       "cluster": "hire",
-      "indexed": null,
-      "lastInspected": null,
-      "lastRefreshed": null
+      "indexed": true,
+      "lastInspected": "2026-11-02",
+      "lastRefreshed": null,
+      "coverageState": "Submitted and indexed",
+      "performance": {
+        "days": 28,
+        "clicks": 0,
+        "impressions": 9,
+        "position": 13
+      }
     },
     {
       "slug": "nextjs-full-stack-developer-pakistan",
@@ -487,9 +669,16 @@
         "Indie Development"
       ],
       "cluster": "hire",
-      "indexed": null,
-      "lastInspected": null,
-      "lastRefreshed": null
+      "indexed": true,
+      "lastInspected": "2026-11-02",
+      "lastRefreshed": null,
+      "coverageState": "Submitted and indexed",
+      "performance": {
+        "days": 28,
+        "clicks": 1,
+        "impressions": 17,
+        "position": 7.4
+      }
     },
     {
       "slug": "what-us-startups-pay-full-stack-pakistan",
@@ -504,9 +693,16 @@
         "Indie Development"
       ],
       "cluster": "hire",
-      "indexed": null,
-      "lastInspected": null,
-      "lastRefreshed": null
+      "indexed": true,
+      "lastInspected": "2026-11-02",
+      "lastRefreshed": null,
+      "coverageState": "Submitted and indexed",
+      "performance": {
+        "days": 28,
+        "clicks": 0,
+        "impressions": 25,
+        "position": 9.5
+      }
     },
     {
       "slug": "hire-full-stack-developer-pakistan-2026",
@@ -520,9 +716,16 @@
         "Indie Development"
       ],
       "cluster": "hire",
-      "indexed": null,
-      "lastInspected": null,
-      "lastRefreshed": null
+      "indexed": true,
+      "lastInspected": "2026-11-02",
+      "lastRefreshed": null,
+      "coverageState": "Submitted and indexed",
+      "performance": {
+        "days": 28,
+        "clicks": 0,
+        "impressions": 8,
+        "position": 10.3
+      }
     },
     {
       "slug": "shopify-bought-tailwind-what-changes",
@@ -536,9 +739,16 @@
         "Indie Development"
       ],
       "cluster": "general",
-      "indexed": null,
-      "lastInspected": null,
-      "lastRefreshed": null
+      "indexed": true,
+      "lastInspected": "2026-11-02",
+      "lastRefreshed": null,
+      "coverageState": "Submitted and indexed",
+      "performance": {
+        "days": 28,
+        "clicks": 0,
+        "impressions": 25,
+        "position": 8
+      }
     },
     {
       "slug": "android-developer-verification-sept-30",
@@ -552,9 +762,16 @@
         "Indie Development"
       ],
       "cluster": "general",
-      "indexed": null,
-      "lastInspected": null,
-      "lastRefreshed": null
+      "indexed": true,
+      "lastInspected": "2026-11-02",
+      "lastRefreshed": null,
+      "coverageState": "Submitted and indexed",
+      "performance": {
+        "days": 28,
+        "clicks": 2,
+        "impressions": 391,
+        "position": 7.7
+      }
     },
     {
       "slug": "sell-the-year-bill-the-month-storekit",
@@ -569,9 +786,16 @@
         "Indie Development"
       ],
       "cluster": "general",
-      "indexed": null,
-      "lastInspected": null,
-      "lastRefreshed": null
+      "indexed": true,
+      "lastInspected": "2026-11-02",
+      "lastRefreshed": null,
+      "coverageState": "Submitted and indexed",
+      "performance": {
+        "days": 28,
+        "clicks": 0,
+        "impressions": 49,
+        "position": 6.2
+      }
     },
     {
       "slug": "google-play-12-tester-rule-indie",
@@ -585,9 +809,16 @@
         "Indie Development"
       ],
       "cluster": "general",
-      "indexed": null,
-      "lastInspected": null,
-      "lastRefreshed": null
+      "indexed": true,
+      "lastInspected": "2026-11-02",
+      "lastRefreshed": null,
+      "coverageState": "Submitted and indexed",
+      "performance": {
+        "days": 28,
+        "clicks": 0,
+        "impressions": 13,
+        "position": 9.7
+      }
     },
     {
       "slug": "frontend-after-ai-what-still-matters",
@@ -603,9 +834,16 @@
         "Indie Development"
       ],
       "cluster": "general",
-      "indexed": null,
-      "lastInspected": null,
-      "lastRefreshed": null
+      "indexed": true,
+      "lastInspected": "2026-11-02",
+      "lastRefreshed": null,
+      "coverageState": "Submitted and indexed",
+      "performance": {
+        "days": 28,
+        "clicks": 0,
+        "impressions": 11,
+        "position": 11.2
+      }
     },
     {
       "slug": "nextjs-16-3-turbopack-chunking",
@@ -620,9 +858,16 @@
         "Indie Development"
       ],
       "cluster": "general",
-      "indexed": null,
-      "lastInspected": null,
-      "lastRefreshed": null
+      "indexed": true,
+      "lastInspected": "2026-11-02",
+      "lastRefreshed": null,
+      "coverageState": "Submitted and indexed",
+      "performance": {
+        "days": 28,
+        "clicks": 3,
+        "impressions": 172,
+        "position": 6.7
+      }
     },
     {
       "slug": "app-store-review-process-what-nobody-tells-you",
@@ -639,9 +884,16 @@
         "Mobile Apps"
       ],
       "cluster": "general",
-      "indexed": null,
-      "lastInspected": null,
-      "lastRefreshed": null
+      "indexed": true,
+      "lastInspected": "2026-11-02",
+      "lastRefreshed": null,
+      "coverageState": "Submitted and indexed",
+      "performance": {
+        "days": 28,
+        "clicks": 1,
+        "impressions": 217,
+        "position": 8.6
+      }
     },
     {
       "slug": "ai-first-development-build-features-faster",
@@ -657,9 +909,16 @@
         "Productivity"
       ],
       "cluster": "general",
-      "indexed": null,
-      "lastInspected": null,
-      "lastRefreshed": null
+      "indexed": false,
+      "lastInspected": "2026-11-02",
+      "lastRefreshed": null,
+      "coverageState": "Crawled - currently not indexed",
+      "performance": {
+        "days": 28,
+        "clicks": 0,
+        "impressions": 6,
+        "position": 17
+      }
     },
     {
       "slug": "custom-billing-engine-stripe-subscriptions",
@@ -675,9 +934,16 @@
         "Billing"
       ],
       "cluster": "general",
-      "indexed": null,
-      "lastInspected": null,
-      "lastRefreshed": null
+      "indexed": true,
+      "lastInspected": "2026-11-02",
+      "lastRefreshed": null,
+      "coverageState": "Submitted and indexed",
+      "performance": {
+        "days": 28,
+        "clicks": 0,
+        "impressions": 6,
+        "position": 8.7
+      }
     },
     {
       "slug": "fixing-lighthouse-score-portfolio-seo-accessibility",
@@ -693,9 +959,16 @@
         "Portfolio"
       ],
       "cluster": "general",
-      "indexed": null,
-      "lastInspected": null,
-      "lastRefreshed": null
+      "indexed": true,
+      "lastInspected": "2026-11-02",
+      "lastRefreshed": null,
+      "coverageState": "Submitted and indexed",
+      "performance": {
+        "days": 28,
+        "clicks": 0,
+        "impressions": 17,
+        "position": 8.1
+      }
     },
     {
       "slug": "building-a-blog-engine-with-nextjs-16-app-router",
@@ -711,9 +984,16 @@
         "Tutorial"
       ],
       "cluster": "general",
-      "indexed": null,
-      "lastInspected": null,
-      "lastRefreshed": null
+      "indexed": true,
+      "lastInspected": "2026-11-02",
+      "lastRefreshed": null,
+      "coverageState": "Submitted and indexed",
+      "performance": {
+        "days": 28,
+        "clicks": 0,
+        "impressions": 21,
+        "position": 9.7
+      }
     }
   ]
 }
