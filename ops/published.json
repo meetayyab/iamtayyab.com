@@ -1,6 +1,22 @@
 {
-  "updatedAt": "2026-10-21",
+  "updatedAt": "2026-11-02",
   "posts": [
+    {
+      "slug": "app-store-multiseat-subscriptions-indie-guide",
+      "url": "https://www.iamtayyab.com/blog/app-store-multiseat-subscriptions-indie-guide",
+      "publishedAt": "2026-11-02",
+      "cluster": "general",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null,
+      "title": "App Store Multiseat Subscriptions: Selling Your iOS App to Teams and Schools",
+      "tags": [
+        "App Store",
+        "Pricing",
+        "Indie apps",
+        "SaaS"
+      ]
+    },
     {
       "slug": "make-your-saas-api-agent-ready",
       "title": "AI Agents Are Starting to Pay for Software Themselves. Is Your SaaS or API Ready?",
