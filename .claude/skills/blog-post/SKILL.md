@@ -13,7 +13,9 @@ Read `ops/editorial-rules.md` first. This skill is the file format and the check
   the HN/PH thread). A search snippet is not a source.
 - Read `ops/published.json` and pick **at least 3 existing posts** to link inline, by topic.
   Note their URLs and a one-line reason each.
-- Pick the **target search phrase** (3–6 words a builder would type). It goes in the title,
+- Pick the **target search phrase** (3–6 words someone would actually type). For a
+  buyer-intent post, that is a phrase a *founder* types ("cost to build an MVP"), not one a
+  developer types. It goes in the title,
   the first 100 words, one H2, and the `seoDescription`.
 
 ## 2. File format — `ops/drafts/<slug>.md`
@@ -51,7 +53,8 @@ Lead paragraph: answer the title in 2–3 sentences with the key number or date.
 Prose with [inline source links](https://...) and [internal links](https://www.iamtayyab.com/blog/...).
 
 ```bash
-# example: label every code block
+## example: label every code block (TWO hashes - the validator treats a
+## leading '# ' as a stray H1, even inside a fenced block)
 ```
 
 ### 2. ...
@@ -95,7 +98,13 @@ Rules the converter relies on:
       post is in a cluster.
 - [ ] Every number, date and quote has an inline source link.
 - [ ] FAQ with 4–6 questions. Quick checklist present.
-- [ ] No "About the author", "Soft CTA", bio or sign-off in the body.
+- [ ] No "About the author", "Soft CTA", bio or sign-off in the body — the template
+      renders the mid-article CTA, the end-of-post CTA, the author box and the newsletter.
+- [ ] The lead names the reader's situation, not just the news.
+- [ ] The practical core says what the work involves and roughly how long it takes.
+- [ ] The closing paragraph leaves the reader with a decision (do it / hand it over).
+- [ ] At least one link to the hire hub or a buyer-intent post, where it reads naturally.
+- [ ] Code block labels use `## example:`, never `# example:`.
 - [ ] No Pakistan/South-Asia audience framing; no product names other than DripScore /
       dawnapps.co.
 - [ ] Tags from `ops/tags.json`. `seoTitle` ≤ 60, `seoDescription` 140–160.

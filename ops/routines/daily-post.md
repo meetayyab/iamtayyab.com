@@ -18,11 +18,11 @@ Write five candidates to `ops/shortlists/YYYY-MM-DD.md` and commit. Then post th
 
 > Morning! Here are five topics for today. Pick one, tweak one, or I can dig again.
 >
-> 1. **Working title** — *Why now:* dated hook with the source. *Reader value:* what the post covers and for whom. *Target phrase:* "…". *Links to:* two or three existing post slugs.
+> 1. **Working title** — *Bucket:* buyer-intent | technical-authority. *Why now:* dated hook with the source. *Reader value:* what the post covers and for whom. *Target phrase:* "…". *Links to:* two or three existing post slugs.
 > …
 > Reply with a number, a tweak, or "research again".
 
-Rules: nothing already covered in `published.json` (check topics, not just slugs), nothing from the last ten shortlists, no hire-angle topics, global audience only, every candidate must plausibly link to two existing posts. If Tayyab says "research again" (optionally with a count), do a fresh round excluding everything shown so far.
+Rules: nothing already covered in `published.json` (check topics, not just slugs — and if `published.json` looks stale, reconcile it against Sanity before trusting it), nothing from the last ten shortlists, global audience only, every candidate must plausibly link to two existing posts. Label every candidate **buyer-intent** or **technical-authority** and aim for two of each across Mon–Thu; check the week's earlier shortlists so the split actually lands. Leads are the priority — see `ops/editorial-rules.md`. If Tayyab says "research again" (optionally with a count), do a fresh round excluding everything shown so far.
 
 Stop here and wait for his reply.
 

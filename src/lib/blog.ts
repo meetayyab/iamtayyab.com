@@ -60,3 +60,34 @@ export function extractToc(body: unknown): TocItem[] {
 
 /** Minimum H2 count before a TOC is shown. */
 export const TOC_MIN_HEADINGS = 4;
+
+/**
+ * Where to slot the mid-article CTA.
+ *
+ * Aims for roughly a third of the way down, then snaps forward to the next H2 so
+ * the CTA never splits a section mid-thought. Returns `body.length` (i.e. "do not
+ * insert") for short posts, where an interruption would cost more than it earns.
+ */
+export const CTA_MIN_BLOCKS = 14;
+
+export function findCtaInsertIndex(body: unknown): number {
+  if (!Array.isArray(body)) return 0;
+  const blocks = body as any[];
+  if (blocks.length < CTA_MIN_BLOCKS) return blocks.length;
+
+  const target = Math.floor(blocks.length * 0.33);
+  for (let i = target; i < blocks.length; i += 1) {
+    const block = blocks[i];
+    if (block?._type === 'block' && block.style === 'h2') {
+      // Don't let it land on the closing furniture of a post.
+      const text = (block.children ?? [])
+        .map((c: any) => c?.text ?? '')
+        .join('')
+        .trim()
+        .toLowerCase();
+      if (['faq', 'sources', 'quick checklist'].includes(text)) return blocks.length;
+      return i;
+    }
+  }
+  return blocks.length;
+}

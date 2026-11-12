@@ -4,7 +4,7 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { PortableText, PortableTextComponents } from '@portabletext/react';
 import { getPosts, getPost, getRelatedPosts, urlFor } from '@/lib/sanity';
-import { extractToc, headingId, tagToSlug, TOC_MIN_HEADINGS } from '@/lib/blog';
+import { extractToc, findCtaInsertIndex, headingId, tagToSlug, TOC_MIN_HEADINGS } from '@/lib/blog';
 import {
   buildBlogPostingAuthor,
   buildFaqPageSchema,
@@ -14,8 +14,11 @@ import {
 } from '@/lib/seo';
 import AuthorBio from '@/components/blog/author-bio';
 import Breadcrumbs from '@/components/blog/breadcrumbs';
+import InlineCta from '@/components/blog/inline-cta';
+import PostCta from '@/components/blog/post-cta';
 import RelatedPosts from '@/components/blog/related-posts';
 import TableOfContents from '@/components/blog/table-of-contents';
+import NewsletterForm from '@/components/general/newsletter-form';
 import Container from '@/components/layout/container';
 import Typography from '@/components/general/typography';
 
@@ -250,6 +253,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const faqs = extractFaqFromPortableText(post.body);
   const toc = extractToc(post.body);
   const showToc = toc.filter((t) => t.level === 2).length >= TOC_MIN_HEADINGS;
+
+  // Split the body so a contextual CTA can sit partway down, where readers who
+  // never scroll to the end still see it.
+  const bodyBlocks: any[] = Array.isArray(post.body) ? post.body : [];
+  const ctaIndex = findCtaInsertIndex(bodyBlocks);
+  const showInlineCta = ctaIndex > 0 && ctaIndex < bodyBlocks.length;
   const related = await getRelatedPosts(slug, post.tags ?? [], 3);
 
   const jsonLd = {
@@ -362,13 +371,31 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           {showToc && <TableOfContents items={toc} />}
 
           {/* Body */}
-          {post.body && (
+          {bodyBlocks.length > 0 && (
             <div className="min-w-0">
-              <PortableText value={post.body} components={portableTextComponents} />
+              {showInlineCta ? (
+                <>
+                  <PortableText
+                    value={bodyBlocks.slice(0, ctaIndex)}
+                    components={portableTextComponents}
+                  />
+                  <InlineCta />
+                  <PortableText
+                    value={bodyBlocks.slice(ctaIndex)}
+                    components={portableTextComponents}
+                  />
+                </>
+              ) : (
+                <PortableText value={bodyBlocks} components={portableTextComponents} />
+              )}
             </div>
           )}
 
+          <PostCta />
+
           <AuthorBio />
+
+          <NewsletterForm location="blog-post" />
 
           <RelatedPosts posts={related} />
 
@@ -383,7 +410,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               </svg>
               Back to all posts
             </Link>
-            <div className="text-sm text-gray-500">Thanks for reading 🙏</div>
+            <Link
+              href="/#contact"
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-violet-600 underline underline-offset-2 transition-colors hover:text-violet-800 dark:text-violet-400 dark:hover:text-violet-300"
+            >
+              Have a project like this? Get in touch
+            </Link>
           </div>
 
         </div>

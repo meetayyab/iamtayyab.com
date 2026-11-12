@@ -5,6 +5,7 @@ import { formatPostCount, parseBlogPageParam, POSTS_PER_PAGE, tagToSlug } from '
 import { buildBlogCollectionSchema, SITE_URL } from '@/lib/seo';
 import BlogPagination from '@/components/blog/blog-pagination';
 import PostCard from '@/components/blog/post-card';
+import NewsletterForm from '@/components/general/newsletter-form';
 import Container from '@/components/layout/container';
 import Typography from '@/components/general/typography';
 import Tag from '@/components/data-display/tag';
@@ -132,6 +133,8 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
               totalCount={totalCount}
               pageSize={POSTS_PER_PAGE}
             />
+
+            <NewsletterForm location="blog-index" />
           </>
         )}
       </Container>

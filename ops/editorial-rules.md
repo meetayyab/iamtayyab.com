@@ -6,9 +6,16 @@ routine prompt, this file wins.
 
 ## Who this is for
 
-- **Goal, in order:** traffic → leads → projects. Every post must plausibly do at least one of:
-  rank for a phrase people search, get shared by builders, or move a founder toward
-  `/full-stack-developer-pakistan`.
+- **Goal, in order:** leads → clients → personal brand. Traffic is a means, not the
+  scoreboard. A post that gets 5,000 developer visits and produces no enquiry has
+  underperformed a post that gets 300 founder visits and produces one.
+- Every post must plausibly do at least one of: **rank for a phrase a buyer searches**,
+  **move a founder toward an enquiry**, or **prove competence to someone evaluating me**.
+  Pure traffic plays no longer qualify on their own.
+- **The reader we are paid by** is the person who can sign off on work: a founder, a
+  technical co-founder, a solo operator, a small-team CTO. Developers are a welcome
+  secondary audience — they share posts and they recommend people — but they are not the
+  audience the CTA is written for.
 - **Audience:** indie developers, solo founders and small startup teams in the US/UK/EU
   shipping web and mobile products. Global/Western framing always. Pakistan and Lahore
   appear only as location proof ("from Lahore", "UTC+5 overlap"), never as the audience.
@@ -36,7 +43,22 @@ routine prompt, this file wins.
   the last 10 shortlists, and anything the owner has passed on twice.
 - Prefer evergreen-with-a-hook over pure news: "X changed on Oct 20 — here is the checklist"
   outlives "X changed".
-- Don't pitch hire-angle topics unless asked; the hire cluster is complete.
+- **Weekly split (Mon–Thu), enforced at shortlist time:** two posts of *buyer intent* and
+  two of *technical authority*. Shortlists must say which bucket each candidate is in, and
+  must not propose four of one kind.
+  - **Buyer-intent** topics are the ones a person with a budget searches: what something
+    costs, build vs buy, contractor vs agency vs in-house, how long a rebuild takes, what
+    goes wrong when you hire badly, "do we need X". These carry the leads.
+  - **Technical-authority** topics are the dated, practical posts that earn links, shares
+    and credibility: advisories, store policy deadlines, framework changes, checklists.
+    These feed the brand and the backlinks, and they still need a CTA that fits.
+- The old "the hire cluster is complete, don't pitch hire-angle topics" rule is **retired**.
+  The nine hire-cluster pages target one keyword family; buyer-intent posts are a broader
+  category and are now actively wanted. What is still banned is *thin* hire content that
+  repeats the cluster pages without adding a new angle or new numbers.
+- Every post, in either bucket, needs at least one natural route to the hire hub or to a
+  buyer-intent post. If a topic genuinely cannot reach one, it is a brand post — run it, but
+  not as one of the week's buyer-intent slots.
 
 ## Writing
 
@@ -56,7 +78,9 @@ routine prompt, this file wins.
   iamtayyab.com posts in the body (not nav, not CTA), chosen by topic, with descriptive
   anchors. Internal links use absolute `https://www.iamtayyab.com/...` URLs. Every post
   in a cluster links to its hub.
-- **Code:** 3–5 short labelled example blocks (`# example`) for technical posts. Code is
+- **Code:** 3–5 short labelled example blocks for technical posts. Label the first line
+  `## example: what this shows` — **two hashes, not one**. The publish validator rejects any
+  body line starting with `# ` as a stray H1, and that check does not skip fenced blocks. Code is
   the only thing that goes in code blocks: tables, rate cards and lists go in Markdown
   tables or bullets (a code-block rate snapshot clipped on mobile once).
 - **Security topics** are defence-only: what to check and fix, never how to attack.
@@ -73,6 +97,33 @@ routine prompt, this file wins.
   `trigger download` endpoint called (Unsplash API terms). Never AI-generated covers.
 - Sponsored or paid links, if ever accepted, get `rel="sponsored"` and a visible label.
   Off-topic paid posts are refused.
+
+## Conversion (what the template does, and what the post must do)
+
+The post template renders the conversion furniture; the body must not duplicate it:
+
+- **Mid-article CTA** — injected automatically about a third of the way down, at the next
+  H2, for posts of ~14 blocks or more. Nothing to write.
+- **End-of-post CTA** — a single primary action ("Tell me about your project") plus one
+  secondary link to the hire hub. Rendered after the body.
+- **Author box** — credibility only, with small text socials. Not a CTA.
+- **Newsletter form** — after the author box, and on the blog index.
+
+So the rules about the body are unchanged in form but sharper in purpose: never write
+"About the author", "Soft CTA", "Written by", a bio or a sign-off into the body. What the
+body *must* do instead:
+
+- **Name the reader's situation in the lead.** "If you run a small backend and terminate TLS
+  in Node" converts better than "Node shipped 16 CVEs", because the reader self-identifies
+  before the CTA ever appears.
+- **Earn the CTA in the practical core.** Somewhere in the checklist or scenarios, say
+  plainly what the work actually involves and how long it takes. A reader who thinks "that's
+  a day I don't have" is the reader who clicks.
+- **Close on the reader's next decision, not on the topic.** The final paragraph before
+  `## Sources` should leave them with a choice to make — do it themselves or hand it over —
+  rather than a summary of what they just read.
+- **Do not hard-sell.** One soft, honest closing paragraph. The template's CTA does the
+  asking; the body earns the right to ask.
 
 ## Publishing
 
