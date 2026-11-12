@@ -1,6 +1,56 @@
 {
-  "updatedAt": "2026-10-21",
+  "updatedAt": "2026-11-12",
   "posts": [
+    {
+      "slug": "nodejs-security-release-checklist-november-2026",
+      "url": "https://www.iamtayyab.com/blog/nodejs-security-release-checklist-november-2026",
+      "publishedAt": "2026-11-12",
+      "cluster": "general",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null,
+      "title": "Node.js Security Release Checklist: 16 CVEs, Three LTS Lines",
+      "tags": [
+        "Node.js",
+        "Security",
+        "DevOps"
+      ]
+    },
+    {
+      "slug": "app-store-multiseat-subscriptions-indie-guide",
+      "title": "App Store Multiseat Subscriptions: Selling Your iOS App to Teams and Schools",
+      "url": "https://www.iamtayyab.com/blog/app-store-multiseat-subscriptions-indie-guide",
+      "publishedAt": "2026-11-02",
+      "tags": [
+        "App Store",
+        "Pricing",
+        "Indie apps",
+        "SaaS"
+      ],
+      "cluster": "general",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null
+    },
+    {
+      "slug": "recursive-flint-local-coding-model-indie-devs",
+      "title": "Can a Laptop Coding Model Replace Your Cloud Agent? Recursive Flint for Indie Devs",
+      "url": "https://www.iamtayyab.com/blog/recursive-flint-local-coding-model-indie-devs",
+      "publishedAt": "2026-10-22",
+      "tags": [
+        "Recursive Flint",
+        "local LLM",
+        "AI coding agents",
+        "Ollama",
+        "llama.cpp",
+        "Apple Silicon",
+        "indie developers"
+      ],
+      "cluster": "general",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null
+    },
     {
       "slug": "make-your-saas-api-agent-ready",
       "title": "AI Agents Are Starting to Pay for Software Themselves. Is Your SaaS or API Ready?",
