@@ -35,19 +35,17 @@ One disclosure first, because it matters for how you read every other cost guide
 
 Three scopes, costed from the hours up. The hour counts are my planning assumptions, explained in detail below. The rates are published bands, sourced in the next section.
 
-| Scope | Est. hours | At $20–35/hr | At $60–150/hr |
-| --- | --- | --- | --- |
-| Validation MVP | ~300 | $6,000–$10,500 | $18,000–$45,000 |
-| Transactional MVP | ~850 | $17,000–$29,750 | $51,000–$127,500 |
-| Regulated or AI-heavy MVP | ~1,700 | $34,000–$59,500 | $102,000–$255,000 |
+- **Validation MVP — about 300 hours.** $6,000–$10,500 at offshore contractor rates of $20–35/hr; $18,000–$45,000 at agency rates of $60–150/hr.
+- **Transactional MVP — about 850 hours.** $17,000–$29,750 at $20–35/hr; $51,000–$127,500 at $60–150/hr.
+- **Regulated or AI-heavy MVP — about 1,700 hours.** $34,000–$59,500 at $20–35/hr; $102,000–$255,000 at $60–150/hr.
 
 If you want one number to put in a deck before you have scoped anything: **budget $30,000 for a transactional MVP built by a competent senior contractor, and treat anything under $15,000 as a prototype rather than a product.** Then read the rest of this to find out which way your particular build moves off that number.
 
-For comparison, the vendor guides put a simple MVP at [$8K–$25K and a complex one at $55K–$150K](https://devoptiv.com/blog/mvp-development-cost-complete-guide-2026), with [most startups in a $10K–$50K band](https://www.techtic.com/blog/mvp-development-cost-2026-pricing-breakdown/) and regulated healthtech above $150,000. Those ranges are consistent with the table — which tells you the vendor numbers are roughly right and that they are quietly assuming mid-tier offshore or blended rates, not US agency rates.
+For comparison, the vendor guides put a simple MVP at [$8K–$25K and a complex one at $55K–$150K](https://devoptiv.com/blog/mvp-development-cost-complete-guide-2026), with [most startups in a $10K–$50K band](https://www.techtic.com/blog/mvp-development-cost-2026-pricing-breakdown/) and regulated healthtech above $150,000. Those ranges are consistent with the figures above — which tells you the vendor numbers are roughly right and that they are quietly assuming mid-tier offshore or blended rates, not US agency rates.
 
 ## Where the rates come from
 
-The spread in that table is almost entirely about who writes the code and where they sit. The bands below are third-party vendor and market figures, not my rate card, and vendor rate pages are marketing material — treat them as context, not quotes.
+The spread in those numbers is almost entirely about who writes the code and where they sit. The bands below are third-party vendor and market figures, not my rate card, and vendor rate pages are marketing material — treat them as context, not quotes.
 
 - **Mid-level contractor, offshore:** roughly **$15–25/hr**. **Senior or specialist:** roughly **$25–40+/hr**. Agency-vetted seniors are sometimes quoted at **$28–60/hr**. These are the bands I walked through in detail in [what US startups actually pay for a full stack developer](https://www.iamtayyab.com/blog/what-us-startups-pay-full-stack-pakistan), with each source named and dated.
 - **Fully loaded staffing seat:** about **$1,500–$3,000/month**, with a mid-level example near **$2,100/month** (roughly $25,200/year).

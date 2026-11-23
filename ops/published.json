@@ -1,6 +1,22 @@
 {
-  "updatedAt": "2026-10-21",
+  "updatedAt": "2026-11-23",
   "posts": [
+    {
+      "slug": "mvp-development-cost",
+      "url": "https://www.iamtayyab.com/blog/mvp-development-cost",
+      "publishedAt": "2026-11-23",
+      "cluster": "general",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null,
+      "title": "MVP Development Cost in 2026: What Founders Actually Pay",
+      "tags": [
+        "Hiring",
+        "Pricing",
+        "Full stack",
+        "SaaS"
+      ]
+    },
     {
       "slug": "make-your-saas-api-agent-ready",
       "title": "AI Agents Are Starting to Pay for Software Themselves. Is Your SaaS or API Ready?",

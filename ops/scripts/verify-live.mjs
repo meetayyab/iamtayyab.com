@@ -7,7 +7,17 @@
 // Prints JSON {url, status, inSitemap, h1Count, hasToc, relatedCount, screenshots:{light,dark}, problems:[]}.
 
 import { mkdir } from 'node:fs/promises';
+import { existsSync } from 'node:fs';
 import { chromium } from 'playwright';
+
+// Some environments (the cloud runner) ship a preinstalled Chromium that does not match
+// the browser revision this Playwright version expects. Prefer an explicit path when one
+// is available so we never need `playwright install`.
+const CHROME_PATH = process.env.CHROMIUM_PATH
+  ?? (existsSync('/opt/pw-browsers/chromium') ? '/opt/pw-browsers/chromium' : undefined);
+const LAUNCH_OPTS = CHROME_PATH
+  ? { executablePath: CHROME_PATH, args: ['--no-sandbox'] }
+  : {};
 
 const SITE_URL = 'https://www.iamtayyab.com';
 const args = process.argv.slice(2);
@@ -40,7 +50,7 @@ if (!inSitemap) problems.push('URL not in sitemap.xml yet');
 
 // 3. Render in both themes.
 await mkdir(outDir, { recursive: true });
-const browser = await chromium.launch();
+const browser = await chromium.launch(LAUNCH_OPTS);
 const shots = {};
 let h1Count = 0;
 let hasToc = false;
