@@ -7,14 +7,23 @@ description: Write a blog post for iamtayyab.com in the house format (Markdown w
 
 Read `ops/editorial-rules.md` first. This skill is the file format and the checklist.
 
+**The reader is a founder, startup CTO or agency owner who pays for software to be built —
+not a developer who builds it.** They approve the budget and sign the contract, and they are
+not fluent in the stack. Write so they can make a decision. If the body of the post is only
+useful to someone who already writes the code, it is the wrong post.
+
 ## 1. Research before writing
 
 - Open the primary sources named in the shortlist (vendor docs, changelogs, official posts,
   the HN/PH thread). A search snippet is not a source.
 - Read `ops/published.json` and pick **at least 3 existing posts** to link inline, by topic.
-  Note their URLs and a one-line reason each.
-- Pick the **target search phrase** (3–6 words a builder would type). It goes in the title,
-  the first 100 words, one H2, and the `seoDescription`.
+  Note their URLs and a one-line reason each. **At least one must be a hire-cluster post or
+  the hub** (`ops/hire-pages.json`) where it is genuinely relevant.
+- Pick the **target search phrase** (3–6 words **a buyer would type**, not a developer —
+  "how much does an app cost to maintain", not "Background Assets migration"). It goes in
+  the title, the first 100 words, one H2, and the `seoDescription`.
+- State the **translation**: the one sentence that turns the underlying event into money,
+  time, risk or revenue for the reader. That sentence belongs in the lead paragraph.
 
 ## 2. File format — `ops/drafts/<slug>.md`
 
@@ -36,22 +45,24 @@ sources:
 
 Lead paragraph: answer the title in 2–3 sentences with the key number or date.
 
-## What changed on <date>
-
+## What changed on <date> — and what it costs you
+                                            <- for an evergreen buyer post use
+                                               "## The short answer" instead
 ...
 
 ## Where things stand
-
+                                            <- evergreen: "## Why this keeps happening"
 ...
 
-## The checklist / scenarios / steps        <- the practical core
+## The checklist / cost breakdown / decision framework / questions to ask
+                                            <- the practical core
 
 ### 1. First item
 
 Prose with [inline source links](https://...) and [internal links](https://www.iamtayyab.com/blog/...).
 
 ```bash
-# example: label every code block
+# example: label every code block — optional, at most 2 per post, never load-bearing
 ```
 
 ### 2. ...
@@ -80,7 +91,9 @@ Rules the converter relies on:
 - Only `##` and `###` headings in the body. No `#`.
 - Code blocks are fenced with a language; the converter turns each fenced block into a
   paragraph with the `code` mark on every span, which the site renders as a macOS-style
-  snippet. Inline code uses single backticks.
+  snippet. Inline code uses single backticks. **Code is optional and capped at 2 short
+  blocks** — these posts are carried by cost tables, timelines, checklists, decision trees
+  and questions-to-ask lists.
 - Links are standard Markdown links. Internal links are absolute `https://www.iamtayyab.com/…`.
 - Tables are GitHub-flavoured Markdown; the converter renders them as paragraphs with a
   `code`-free bullet list fallback, so keep tables ≤ 4 columns or use bullets.
@@ -90,16 +103,22 @@ Rules the converter relies on:
 
 ## 3. Self-review before handing over (all must be true)
 
-- [ ] Target phrase in title, first 100 words, one H2, `seoDescription`.
-- [ ] ≥ 3 inline internal links to existing posts (from `published.json`), hub link if the
-      post is in a cluster.
+- [ ] **Owner test:** a founder paying someone else to write the code would click this, and
+      would trust the author after reading it. Nothing in the body needs the reader to code.
+- [ ] Target phrase (a buyer's phrase) in title, first 100 words, one H2, `seoDescription`.
+- [ ] The money/time/risk translation is in the lead paragraph, not buried.
+- [ ] ≥ 3 inline internal links to existing posts (from `published.json`), **≥ 1 into the
+      hire hub or a hire-cluster post**, hub link if the post is in a cluster.
 - [ ] Every number, date and quote has an inline source link.
+- [ ] Concrete ranges given — USD cost, weeks, developer-days — each with its basis stated.
+      No bare "it depends".
+- [ ] Every technical term defined in plain English on first use.
 - [ ] FAQ with 4–6 questions. Quick checklist present.
 - [ ] No "About the author", "Soft CTA", bio or sign-off in the body.
 - [ ] No Pakistan/South-Asia audience framing; no product names other than DripScore /
       dawnapps.co.
 - [ ] Tags from `ops/tags.json`. `seoTitle` ≤ 60, `seoDescription` 140–160.
-- [ ] 2,000–3,500 words. Security content is defence-only.
+- [ ] 2,000–3,500 words. ≤ 2 code blocks. Security content is defence-only.
 - [ ] Draft summary written: title, word count, source count, internal links added, cover
       description, corrections vs the morning summary.
 
