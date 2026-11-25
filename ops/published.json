@@ -1,6 +1,23 @@
 {
-  "updatedAt": "2026-10-21",
+  "updatedAt": "2026-11-25",
   "posts": [
+    {
+      "slug": "app-maintenance-cost-per-year-2027",
+      "url": "https://www.iamtayyab.com/blog/app-maintenance-cost-per-year-2027",
+      "publishedAt": "2026-11-25",
+      "cluster": "general",
+      "indexed": null,
+      "lastInspected": null,
+      "lastRefreshed": null,
+      "title": "App Maintenance Cost Per Year: The 2027 Bill Nobody Quoted You",
+      "tags": [
+        "App Store",
+        "Google Play",
+        "Pricing",
+        "Hiring",
+        "macOS"
+      ]
+    },
     {
       "slug": "make-your-saas-api-agent-ready",
       "title": "AI Agents Are Starting to Pay for Software Themselves. Is Your SaaS or API Ready?",
